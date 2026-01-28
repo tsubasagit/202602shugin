@@ -1,6 +1,28 @@
 [
   {
     "parties": "all",
+    "media": "NHK",
+    "mediaClass": "purple",
+    "favicon": "https://www.nhk.or.jp/favicon.ico",
+    "date": "2026年1月28日",
+    "title": "衆院選公示 計1285人が立候補 高市政権継続か 野党が阻止か",
+    "excerpt": "第51回衆院選が27日公示され、計1285人が立候補。高市政権の継続か、野党が勢力を伸ばして阻止するかが最大の焦点。12日間の選挙戦が本格化した。",
+    "link": "https://www3.nhk.or.jp/news/html/20260127/k10015036141000.html",
+    "tags": "公示、立候補者、高市政権、野党"
+  },
+  {
+    "parties": "all",
+    "media": "毎日新聞",
+    "mediaClass": "green",
+    "favicon": "https://mainichi.jp/favicon.ico",
+    "date": "2026年1月28日",
+    "title": "衆院選2026　きょう公示　責任ある政党見極める時",
+    "excerpt": "衆院選が27日公示。戦後最短の16日間の選挙戦がスタート。消費税や政治とカネなど、責任ある政党を見極める争点を整理する。",
+    "link": "https://mainichi.jp/articles/20260127/ddm/005/070/086000c",
+    "tags": "公示、争点、責任ある政党"
+  },
+  {
+    "parties": "all",
     "media": "朝日新聞",
     "mediaClass": "red",
     "favicon": "https://www.asahi.com/favicon.ico",
