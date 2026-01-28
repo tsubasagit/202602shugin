@@ -4,11 +4,11 @@
     "media": "朝日新聞",
     "mediaClass": "red",
     "favicon": "https://www.asahi.com/favicon.ico",
-    "date": "2026年1月27日 朝刊",
-    "title": "衆院選が公示、立候補届出始まる",
-    "excerpt": "第51回衆議院議員総選挙が27日公示された。2月8日投開票に向け、各選挙区で立候補の届出が始まった。小選挙区289、比例11ブロックで、与野党の争いが本格化する。",
-    "link": "https://www.asahi.com/politics/",
-    "tags": "衆院選公示、立候補届出、選挙戦"
+    "date": "2026年1月27日",
+    "title": "きょう解散、「異例ずくめ」の衆院選へ　27日公示、2月8日投開票",
+    "excerpt": "衆院は解散し、衆院選は27日公示・2月8日投開票へ。短期日程など「異例ずくめ」の選挙戦となる。",
+    "link": "https://www.asahi.com/articles/ASV1Q41Q1V1QUTFK00DM.html",
+    "tags": "解散、衆院選、公示、投開票"
   },
   {
     "parties": "jimin",
@@ -16,32 +16,32 @@
     "mediaClass": "red",
     "favicon": "https://www.asahi.com/favicon.ico",
     "date": "2026年1月27日",
-    "title": "高市総理、公示日に「国民の信を問う」と街頭へ",
-    "excerpt": "高市早苗総理大臣は27日、衆院選公示を受け都内で街頭演説。「食料品免税など重要な政策を実現するため、必ず国民の信を問う」と訴えた。与党は過半数維持を目指し、公示日から選挙戦に全力で取り組む構えだ。",
-    "link": "https://www.asahi.com/politics/",
-    "tags": "高市総理、公示日、街頭演説"
+    "title": "【詳報】衆院選の候補者が出そろう　女性は24.4%、過去最高に",
+    "excerpt": "衆院選公示で候補者が出そろい、女性候補の比率が過去最高となった。",
+    "link": "https://www.asahi.com/articles/ASV1V4522V1VUTFK00DM.html",
+    "tags": "候補者、女性比率、公示"
   },
   {
     "parties": "all",
     "media": "読売新聞",
     "mediaClass": "blue",
     "favicon": "https://www.yomiuri.co.jp/favicon.ico",
-    "date": "2026年1月27日 朝刊",
-    "title": "衆院選公示で選挙戦本格化、各党が第一声",
-    "excerpt": "衆院選が27日公示され、12日間の選挙戦がスタートした。与野党各党の代表・党首は公示日、各地で第一声を発し、消費税減税や物価対策、政権選択など争点ごとに訴えを強めた。",
-    "link": "https://www.yomiuri.co.jp/politics/",
-    "tags": "公示、選挙戦、各党第一声"
+    "date": "2026年1月27日",
+    "title": "［衆院選２０２６］各党「減税」公約次々　市場　財政悪化を懸念…きょう公示",
+    "excerpt": "公示日に合わせ、各党が減税公約を打ち出す一方、市場では財政悪化への懸念も指摘されている。",
+    "link": "https://www.yomiuri.co.jp/election/shugiin/20260127-GYT1T00026/",
+    "tags": "公示、減税公約、市場、財政"
   },
   {
     "parties": "chudo rikken komei",
     "media": "読売新聞",
     "mediaClass": "blue",
     "favicon": "https://www.yomiuri.co.jp/favicon.ico",
-    "date": "2026年1月27日",
-    "title": "中道改革連合・野田代表「政権交代で生活守る」",
-    "excerpt": "中道改革連合の野田佳彦共同代表は27日、公示に合わせて街頭で演説。「政権交代を実現し、給付金や物価対策で国民の生活を守る」と訴えた。立憲・公明系の野党第一党として、公示日から選挙戦を本格化させた。",
-    "link": "https://www.yomiuri.co.jp/politics/",
-    "tags": "中道改革連合、野田代表、政権交代"
+    "date": "2026年1月25日",
+    "title": "衆院選に１２００人超が立候補予定、与党が過半数の２３３議席獲得できるか焦点…２７日公示",
+    "excerpt": "立候補予定者は1200人超。与党が過半数を確保できるかなどが焦点。",
+    "link": "https://www.yomiuri.co.jp/election/shugiin/20260125-GYT1T00151/",
+    "tags": "立候補予定者、過半数、焦点"
   },
   {
     "parties": "all",

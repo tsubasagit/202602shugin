@@ -6,6 +6,7 @@
 (function () {
   var CONFIG = { articlesUrl: 'data/articles.json', videosUrl: 'data/videos.json' };
   var ARTICLE_CLS = { red: 'border-red-600 bg-red-100 text-red-600 bg-red-600 hover:bg-red-700', blue: 'border-blue-600 bg-blue-100 text-blue-600 bg-blue-600 hover:bg-blue-700', purple: 'border-purple-600 bg-purple-100 text-purple-600 bg-purple-600 hover:bg-purple-700', green: 'border-green-600 bg-green-100 text-green-600 bg-green-600 hover:bg-green-700', indigo: 'border-indigo-600 bg-indigo-100 text-indigo-600 bg-indigo-600 hover:bg-indigo-700', orange: 'border-orange-600 bg-orange-100 text-orange-600 bg-orange-600 hover:bg-orange-700', gray: 'border-gray-600 bg-gray-100 text-gray-600 bg-gray-600 hover:bg-gray-700' };
+  var LATEST_ARTICLES_COUNT = 5;
 
   function renderArticle(a) {
     var k = a.mediaClass || 'gray';
@@ -24,11 +25,15 @@
       '<div class="flex items-start justify-between mb-3"><div class="flex items-center gap-3">' +
       '<span class="' + parts[3] + ' text-white px-3 py-1 rounded-lg text-xs font-bold">' + (a.media || '') + '</span>' +
       '<span class="text-sm text-gray-500">' + (a.date || '') + '</span></div></div>' +
-      '<h3 class="text-lg font-bold text-election-navy mb-2">' + (a.title || '') + '</h3>' +
+      '<h3 class="text-lg font-bold text-election-navy mb-2">' +
+        '<a href="' + (a.link || '#') + '" target="_blank" rel="noopener noreferrer" class="hover:underline" title="記事を開く（外部サイト）">' +
+          (a.title || '') +
+        '</a>' +
+      '</h3>' +
       '<p class="text-sm text-gray-700 leading-relaxed mb-2">' + (a.excerpt || '') + '</p>' +
       '<div class="flex items-center justify-between mt-3 pt-3 border-t border-gray-200">' +
       '<div class="text-xs text-gray-500"><span class="font-semibold">関連:</span> ' + (a.tags || '') + '</div>' +
-      '<a href="' + (a.link || '#') + '" target="_blank" rel="noopener noreferrer" class="' + btnCls + '" title="' + (a.media || '') + 'の政治面で関連記事をご覧ください"><span>' + (a.media || '') + 'の政治面へ</span><svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg></a>' +
+      '<a href="' + (a.link || '#') + '" target="_blank" rel="noopener noreferrer" class="' + btnCls + '" title="記事を開く（外部サイト）"><span>記事を開く</span><svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg></a>' +
       '</div></div></div>'
     );
   }
@@ -133,6 +138,7 @@
 
   function run() {
     var newsEl = document.getElementById('news-container');
+    var newsAllEl = document.getElementById('news-articles-list');
     var partyGrid = document.getElementById('party-youtube-grid');
     var newsVideosGrid = document.getElementById('news-videos-grid');
     var videosList = document.getElementById('news-videos-list');
@@ -147,7 +153,11 @@
       var newsVideos = videos.newsVideos || [];
 
       if (newsEl) {
-        newsEl.innerHTML = articles.length ? articles.map(renderArticle).join('') : '<p class="text-gray-500 text-center py-8">記事はありません。</p>';
+        var latest = articles.slice(0, LATEST_ARTICLES_COUNT);
+        newsEl.innerHTML = latest.length ? latest.map(renderArticle).join('') : '<p class="text-gray-500 text-center py-8">記事はありません。</p>';
+      }
+      if (newsAllEl) {
+        newsAllEl.innerHTML = articles.length ? articles.map(renderArticle).join('') : '<p class="text-gray-500 text-center py-8">記事はありません。</p>';
       }
       if (partyGrid) {
         partyGrid.innerHTML = partyVideos.map(renderPartyVideo).join('');

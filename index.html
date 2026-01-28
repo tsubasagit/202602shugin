@@ -1230,6 +1230,12 @@
                 <div id="news-container" class="space-y-4"><p class="text-gray-500 text-center py-8">読み込み中...</p><!-- data/articles.json から js/load-data.js で描画 -->
 
                 </div>
+                <div class="mt-6">
+                    <button type="button" onclick="showTab('news-articles')" class="w-full md:w-auto px-4 py-3 rounded-xl text-sm font-semibold bg-white border border-gray-200 hover:bg-gray-50 transition-colors shadow-soft flex items-center justify-center gap-2">
+                        <span>過去の記事一覧も見る</span>
+                        <span aria-hidden="true">→</span>
+                    </button>
+                </div>
                 </div>
             </div>
 
@@ -2544,8 +2550,8 @@
                     const listEl = document.getElementById('news-articles-list');
                     const newsEl = document.getElementById('news-container');
                     if (listEl && newsEl) {
-                        listEl.innerHTML = newsEl.innerHTML;
-                        listEl.querySelectorAll('.news-item').forEach(el => el.style.display = 'block');
+                        // js/load-data.js が data/articles.json を全件描画するため、ここでは上書きしない
+                        // （news-container は最新数件のみ表示）
                     }
                 }
             }
