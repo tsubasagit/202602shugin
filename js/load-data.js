@@ -5,7 +5,7 @@
  */
 (function () {
   var CONFIG = { articlesUrl: 'data/articles.json', videosUrl: 'data/videos.json' };
-  var ARTICLE_CLS = { red: 'border-red-600 bg-red-100 text-red-600 bg-red-600 hover:bg-red-700', blue: 'border-blue-600 bg-blue-100 text-blue-600 bg-blue-600 hover:bg-blue-700', purple: 'border-purple-600 bg-purple-100 text-purple-600 bg-purple-600 hover:bg-purple-700', green: 'border-green-600 bg-green-100 text-green-600 bg-green-600 hover:bg-green-700', indigo: 'border-indigo-600 bg-indigo-100 text-indigo-600 bg-indigo-600 hover:bg-indigo-700', orange: 'border-orange-600 bg-orange-100 text-orange-600 bg-orange-600 hover:bg-orange-700', gray: 'border-gray-600 bg-gray-100 text-gray-600 bg-gray-600 hover:bg-gray-700' };
+  var ARTICLE_CLS = { red: 'border-red-600 bg-red-100 text-red-600 bg-red-600 hover:bg-red-700', blue: 'border-blue-600 bg-blue-100 text-blue-600 bg-blue-600 hover:bg-blue-700', purple: 'border-purple-600 bg-purple-100 text-purple-600 bg-purple-600 hover:bg-purple-700', green: 'border-green-600 bg-green-100 text-green-600 bg-green-600 hover:bg-green-700', indigo: 'border-indigo-600 bg-indigo-100 text-indigo-600 bg-indigo-600 hover:bg-indigo-700', orange: 'border-orange-600 bg-orange-100 text-orange-600 bg-orange-600 hover:bg-orange-700', slate: 'border-slate-600 bg-slate-100 text-slate-600 bg-slate-600 hover:bg-slate-700', amber: 'border-amber-600 bg-amber-100 text-amber-600 bg-amber-600 hover:bg-amber-700', gray: 'border-gray-600 bg-gray-100 text-gray-600 bg-gray-600 hover:bg-gray-700' };
   var LATEST_ARTICLES_COUNT = 5;
 
   function renderArticle(a) {
