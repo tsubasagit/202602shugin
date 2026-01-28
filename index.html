@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>2026 衆院選 政策比較ガイド</title>
     
+    <!-- Google Analytics 4（アクセス計測）※MEASUREMENT_IDをG-XXXXXXXXXX形式で差し替えてください -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    
     <!-- リソースヒント: 表示速度最優先 -->
     <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
     <link rel="dns-prefetch" href="https://fonts.googleapis.com">
@@ -733,7 +742,7 @@
                 <h3 class="text-xl font-bold text-election-navy mb-4 flex items-center">
                     <span class="bg-gradient-to-r from-indigo-500 to-blue-500 text-white px-4 py-2 rounded-lg mr-3 text-sm">🎬 YouTube</span>
                 </h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div id="party-youtube-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                     <div class="bg-gray-50 rounded-xl p-4">
                         <div class="flex items-center justify-between mb-2">
                             <div class="font-bold text-election-navy">自民党</div>
@@ -1216,312 +1225,10 @@
                     </button>
                 </div>
 
-                <div id="news-container" class="space-y-4">
-                    <!-- 朝日新聞 1月27日 -->
-                    <div class="news-item bg-white rounded-xl shadow-medium p-6 border-l-4 border-red-600 hover:shadow-strong transition-all duration-300 fade-in-on-scroll flex gap-3" data-parties="all">
-                        <a href="https://www.asahi.com/politics/" target="_blank" rel="noopener noreferrer" class="flex-shrink-0 self-start" aria-label="朝日新聞 政治">
-                            <img src="https://www.asahi.com/favicon.ico" alt="" class="w-12 h-12 rounded object-cover bg-gray-100 border border-gray-200" width="48" height="48" loading="lazy" onerror="this.style.display='none';this.nextElementSibling?.classList.remove('hidden')">
-                            <span class="hidden w-12 h-12 rounded bg-red-100 flex items-center justify-center text-red-600 font-bold text-lg">朝</span>
-                        </a>
-                        <div class="flex-1 min-w-0">
-                            <div class="flex items-start justify-between mb-3">
-                                <div class="flex items-center gap-3">
-                                    <span class="bg-red-600 text-white px-3 py-1 rounded-lg text-xs font-bold">朝日新聞</span>
-                                    <span class="text-sm text-gray-500">2026年1月27日 朝刊</span>
-                                </div>
-                            </div>
-                            <h3 class="text-lg font-bold text-election-navy mb-2">衆院選が公示、立候補届出始まる</h3>
-                            <p class="text-sm text-gray-700 leading-relaxed mb-2">
-                                第51回衆議院議員総選挙が27日公示された。2月8日投開票に向け、各選挙区で立候補の届出が始まった。小選挙区289、比例11ブロックで、与野党の争いが本格化する。
-                            </p>
-                            <div class="flex items-center justify-between mt-3 pt-3 border-t border-gray-200">
-                                <div class="text-xs text-gray-500">
-                                    <span class="font-semibold">関連:</span> 衆院選公示、立候補届出、選挙戦
-                                </div>
-                                <a href="https://www.asahi.com/politics/" target="_blank" rel="noopener noreferrer" class="text-xs bg-red-600 text-white px-3 py-1 rounded-lg hover:bg-red-700 transition-colors duration-200 flex items-center gap-1">
-                                    <span>参考記事</span>
-                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+                <p class="text-xs text-gray-500 mb-3 px-1">※「参考記事」は各メディアの政治面トップへ移動します。該当する個別記事は各メディアの一覧からお探しください。</p>
 
-                    <div class="news-item bg-white rounded-xl shadow-medium p-6 border-l-4 border-red-600 hover:shadow-strong transition-all duration-300 fade-in-on-scroll flex gap-3" data-parties="jimin">
-                        <a href="https://www.asahi.com/politics/" target="_blank" rel="noopener noreferrer" class="flex-shrink-0 self-start" aria-label="朝日新聞 政治">
-                            <img src="https://www.asahi.com/favicon.ico" alt="" class="w-12 h-12 rounded object-cover bg-gray-100 border border-gray-200" width="48" height="48" loading="lazy" onerror="this.style.display='none';this.nextElementSibling?.classList.remove('hidden')">
-                            <span class="hidden w-12 h-12 rounded bg-red-100 flex items-center justify-center text-red-600 font-bold text-lg">朝</span>
-                        </a>
-                        <div class="flex-1 min-w-0">
-                            <div class="flex items-start justify-between mb-3">
-                                <div class="flex items-center gap-3">
-                                    <span class="bg-red-600 text-white px-3 py-1 rounded-lg text-xs font-bold">朝日新聞</span>
-                                    <span class="text-sm text-gray-500">2026年1月27日</span>
-                                </div>
-                            </div>
-                            <h3 class="text-lg font-bold text-election-navy mb-2">高市総理、公示日に「国民の信を問う」と街頭へ</h3>
-                            <p class="text-sm text-gray-700 leading-relaxed mb-2">
-                                高市早苗総理大臣は27日、衆院選公示を受け都内で街頭演説。「食料品免税など重要な政策を実現するため、必ず国民の信を問う」と訴えた。与党は過半数維持を目指し、公示日から選挙戦に全力で取り組む構えだ。
-                            </p>
-                            <div class="flex items-center justify-between mt-3 pt-3 border-t border-gray-200">
-                                <div class="text-xs text-gray-500">
-                                    <span class="font-semibold">関連:</span> 高市総理、公示日、街頭演説
-                                </div>
-                                <a href="https://www.asahi.com/politics/" target="_blank" rel="noopener noreferrer" class="text-xs bg-red-600 text-white px-3 py-1 rounded-lg hover:bg-red-700 transition-colors duration-200 flex items-center gap-1">
-                                    <span>参考記事</span>
-                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+                <div id="news-container" class="space-y-4"><p class="text-gray-500 text-center py-8">読み込み中...</p><!-- data/articles.json から js/load-data.js で描画 -->
 
-                    <!-- 読売新聞 1月27日 -->
-                    <div class="news-item bg-white rounded-xl shadow-medium p-6 border-l-4 border-blue-600 hover:shadow-strong transition-all duration-300 fade-in-on-scroll flex gap-3" data-parties="all">
-                        <a href="https://www.yomiuri.co.jp/politics/" target="_blank" rel="noopener noreferrer" class="flex-shrink-0 self-start" aria-label="読売新聞 政治">
-                            <img src="https://www.yomiuri.co.jp/favicon.ico" alt="" class="w-12 h-12 rounded object-cover bg-gray-100 border border-gray-200" width="48" height="48" loading="lazy" onerror="this.style.display='none';this.nextElementSibling?.classList.remove('hidden')">
-                            <span class="hidden w-12 h-12 rounded bg-blue-100 flex items-center justify-center text-blue-600 font-bold text-lg">読</span>
-                        </a>
-                        <div class="flex-1 min-w-0">
-                            <div class="flex items-start justify-between mb-3">
-                                <div class="flex items-center gap-3">
-                                    <span class="bg-blue-600 text-white px-3 py-1 rounded-lg text-xs font-bold">読売新聞</span>
-                                    <span class="text-sm text-gray-500">2026年1月27日 朝刊</span>
-                                </div>
-                            </div>
-                            <h3 class="text-lg font-bold text-election-navy mb-2">衆院選公示で選挙戦本格化、各党が第一声</h3>
-                            <p class="text-sm text-gray-700 leading-relaxed mb-2">
-                                衆院選が27日公示され、12日間の選挙戦がスタートした。与野党各党の代表・党首は公示日、各地で第一声を発し、消費税減税や物価対策、政権選択など争点ごとに訴えを強めた。
-                            </p>
-                            <div class="flex items-center justify-between mt-3 pt-3 border-t border-gray-200">
-                                <div class="text-xs text-gray-500">
-                                    <span class="font-semibold">関連:</span> 公示、選挙戦、各党第一声
-                                </div>
-                                <a href="https://www.yomiuri.co.jp/politics/" target="_blank" rel="noopener noreferrer" class="text-xs bg-blue-600 text-white px-3 py-1 rounded-lg hover:bg-blue-700 transition-colors duration-200 flex items-center gap-1">
-                                    <span>参考記事</span>
-                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="news-item bg-white rounded-xl shadow-medium p-6 border-l-4 border-blue-600 hover:shadow-strong transition-all duration-300 fade-in-on-scroll flex gap-3" data-parties="chudo rikken komei">
-                        <a href="https://www.yomiuri.co.jp/politics/" target="_blank" rel="noopener noreferrer" class="flex-shrink-0 self-start" aria-label="読売新聞 政治">
-                            <img src="https://www.yomiuri.co.jp/favicon.ico" alt="" class="w-12 h-12 rounded object-cover bg-gray-100 border border-gray-200" width="48" height="48" loading="lazy" onerror="this.style.display='none';this.nextElementSibling?.classList.remove('hidden')">
-                            <span class="hidden w-12 h-12 rounded bg-blue-100 flex items-center justify-center text-blue-600 font-bold text-lg">読</span>
-                        </a>
-                        <div class="flex-1 min-w-0">
-                            <div class="flex items-start justify-between mb-3">
-                                <div class="flex items-center gap-3">
-                                    <span class="bg-blue-600 text-white px-3 py-1 rounded-lg text-xs font-bold">読売新聞</span>
-                                    <span class="text-sm text-gray-500">2026年1月27日</span>
-                                </div>
-                            </div>
-                            <h3 class="text-lg font-bold text-election-navy mb-2">中道改革連合・野田代表「政権交代で生活守る」</h3>
-                            <p class="text-sm text-gray-700 leading-relaxed mb-2">
-                                中道改革連合の野田佳彦共同代表は27日、公示に合わせて街頭で演説。「政権交代を実現し、給付金や物価対策で国民の生活を守る」と訴えた。立憲・公明系の野党第一党として、公示日から選挙戦を本格化させた。
-                            </p>
-                            <div class="flex items-center justify-between mt-3 pt-3 border-t border-gray-200">
-                                <div class="text-xs text-gray-500">
-                                    <span class="font-semibold">関連:</span> 中道改革連合、野田代表、政権交代
-                                </div>
-                                <a href="https://www.yomiuri.co.jp/politics/" target="_blank" rel="noopener noreferrer" class="text-xs bg-blue-600 text-white px-3 py-1 rounded-lg hover:bg-blue-700 transition-colors duration-200 flex items-center gap-1">
-                                    <span>参考記事</span>
-                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- NHK 1月27日 -->
-                    <div class="news-item bg-white rounded-xl shadow-medium p-6 border-l-4 border-purple-600 hover:shadow-strong transition-all duration-300 fade-in-on-scroll flex gap-3" data-parties="all">
-                        <a href="https://www3.nhk.or.jp/news/cat04.html" target="_blank" rel="noopener noreferrer" class="flex-shrink-0 self-start" aria-label="NHK 政治ニュース">
-                            <img src="https://www.nhk.or.jp/favicon.ico" alt="" class="w-12 h-12 rounded object-cover bg-gray-100 border border-gray-200" width="48" height="48" loading="lazy" onerror="this.style.display='none';this.nextElementSibling?.classList.remove('hidden')">
-                            <span class="hidden w-12 h-12 rounded bg-purple-100 flex items-center justify-center text-purple-600 font-bold text-lg">N</span>
-                        </a>
-                        <div class="flex-1 min-w-0">
-                            <div class="flex items-start justify-between mb-3">
-                                <div class="flex items-center gap-3">
-                                    <span class="bg-purple-600 text-white px-3 py-1 rounded-lg text-xs font-bold">NHK</span>
-                                    <span class="text-sm text-gray-500">2026年1月27日</span>
-                                </div>
-                            </div>
-                            <h3 class="text-lg font-bold text-election-navy mb-2">衆院選が公示、289小選挙区で争い本格化</h3>
-                            <p class="text-sm text-gray-700 leading-relaxed mb-2">
-                                第51回衆議院議員総選挙が27日午前、公示された。小選挙区289と比例代表11ブロックで、2月8日の投開票日まで12日間の選挙戦が始まった。期日前投票は1月29日から始まる。
-                            </p>
-                            <div class="flex items-center justify-between mt-3 pt-3 border-t border-gray-200">
-                                <div class="text-xs text-gray-500">
-                                    <span class="font-semibold">関連:</span> 衆院選公示、小選挙区、期日前投票
-                                </div>
-                                <a href="https://www3.nhk.or.jp/news/cat04.html" target="_blank" rel="noopener noreferrer" class="text-xs bg-purple-600 text-white px-3 py-1 rounded-lg hover:bg-purple-700 transition-colors duration-200 flex items-center gap-1">
-                                    <span>参考記事</span>
-                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="news-item bg-white rounded-xl shadow-medium p-6 border-l-4 border-purple-600 hover:shadow-strong transition-all duration-300 fade-in-on-scroll flex gap-3" data-parties="ishin">
-                        <a href="https://www3.nhk.or.jp/news/cat04.html" target="_blank" rel="noopener noreferrer" class="flex-shrink-0 self-start" aria-label="NHK 政治ニュース">
-                            <img src="https://www.nhk.or.jp/favicon.ico" alt="" class="w-12 h-12 rounded object-cover bg-gray-100 border border-gray-200" width="48" height="48" loading="lazy" onerror="this.style.display='none';this.nextElementSibling?.classList.remove('hidden')">
-                            <span class="hidden w-12 h-12 rounded bg-purple-100 flex items-center justify-center text-purple-600 font-bold text-lg">N</span>
-                        </a>
-                        <div class="flex-1 min-w-0">
-                            <div class="flex items-start justify-between mb-3">
-                                <div class="flex items-center gap-3">
-                                    <span class="bg-purple-600 text-white px-3 py-1 rounded-lg text-xs font-bold">NHK</span>
-                                    <span class="text-sm text-gray-500">2026年1月27日</span>
-                                </div>
-                            </div>
-                            <h3 class="text-lg font-bold text-election-navy mb-2">維新・藤田共同代表「38議席以上めざす」</h3>
-                            <p class="text-sm text-gray-700 leading-relaxed mb-2">
-                                日本維新の会の藤田文武共同代表は27日、公示日にあたり会見で「前回の38議席を上回る獲得を目指す。消費税減税など公約の実現に全力を尽くす」と述べた。与党として過半数維持も訴えていく方針だ。
-                            </p>
-                            <div class="flex items-center justify-between mt-3 pt-3 border-t border-gray-200">
-                                <div class="text-xs text-gray-500">
-                                    <span class="font-semibold">関連:</span> 日本維新の会、藤田代表、公示日
-                                </div>
-                                <a href="https://www3.nhk.or.jp/news/cat04.html" target="_blank" rel="noopener noreferrer" class="text-xs bg-purple-600 text-white px-3 py-1 rounded-lg hover:bg-purple-700 transition-colors duration-200 flex items-center gap-1">
-                                    <span>参考記事</span>
-                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 毎日新聞 1月27日 -->
-                    <div class="news-item bg-white rounded-xl shadow-medium p-6 border-l-4 border-green-600 hover:shadow-strong transition-all duration-300 fade-in-on-scroll flex gap-3" data-parties="kyosan">
-                        <a href="https://mainichi.jp/seiji/" target="_blank" rel="noopener noreferrer" class="flex-shrink-0 self-start" aria-label="毎日新聞 政治">
-                            <img src="https://mainichi.jp/favicon.ico" alt="" class="w-12 h-12 rounded object-cover bg-gray-100 border border-gray-200" width="48" height="48" loading="lazy" onerror="this.style.display='none';this.nextElementSibling?.classList.remove('hidden')">
-                            <span class="hidden w-12 h-12 rounded bg-green-100 flex items-center justify-center text-green-600 font-bold text-lg">毎</span>
-                        </a>
-                        <div class="flex-1 min-w-0">
-                            <div class="flex items-start justify-between mb-3">
-                                <div class="flex items-center gap-3">
-                                    <span class="bg-green-600 text-white px-3 py-1 rounded-lg text-xs font-bold">毎日新聞</span>
-                                    <span class="text-sm text-gray-500">2026年1月27日 朝刊</span>
-                                </div>
-                            </div>
-                            <h3 class="text-lg font-bold text-election-navy mb-2">共産・田村委員長「消費税5%減税で庶民の味方に」</h3>
-                            <p class="text-sm text-gray-700 leading-relaxed mb-2">
-                                日本共産党の田村智子委員長は27日、衆院選公示を受け記者会見。「消費税5%減税と食料品無税化で、庶民の暮らしを守る選択肢を示す」と述べた。大企業・富裕層への課税強化で財源を確保する方針を改めて強調した。
-                            </p>
-                            <div class="flex items-center justify-between mt-3 pt-3 border-t border-gray-200">
-                                <div class="text-xs text-gray-500">
-                                    <span class="font-semibold">関連:</span> 日本共産党、田村委員長、公示日
-                                </div>
-                                <a href="https://mainichi.jp/seiji/" target="_blank" rel="noopener noreferrer" class="text-xs bg-green-600 text-white px-3 py-1 rounded-lg hover:bg-green-700 transition-colors duration-200 flex items-center gap-1">
-                                    <span>参考記事</span>
-                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 日経新聞 1月27日 -->
-                    <div class="news-item bg-white rounded-xl shadow-medium p-6 border-l-4 border-indigo-600 hover:shadow-strong transition-all duration-300 fade-in-on-scroll flex gap-3" data-parties="all">
-                        <a href="https://www.nikkei.com/politics/" target="_blank" rel="noopener noreferrer" class="flex-shrink-0 self-start" aria-label="日経新聞 政治">
-                            <img src="https://www.nikkei.com/favicon.ico" alt="" class="w-12 h-12 rounded object-cover bg-gray-100 border border-gray-200" width="48" height="48" loading="lazy" onerror="this.style.display='none';this.nextElementSibling?.classList.remove('hidden')">
-                            <span class="hidden w-12 h-12 rounded bg-indigo-100 flex items-center justify-center text-indigo-600 font-bold text-lg">日</span>
-                        </a>
-                        <div class="flex-1 min-w-0">
-                            <div class="flex items-start justify-between mb-3">
-                                <div class="flex items-center gap-3">
-                                    <span class="bg-indigo-600 text-white px-3 py-1 rounded-lg text-xs font-bold">日経新聞</span>
-                                    <span class="text-sm text-gray-500">2026年1月27日 朝刊</span>
-                                </div>
-                            </div>
-                            <h3 class="text-lg font-bold text-election-navy mb-2">衆院選公示、消費税・財源が最大争点に</h3>
-                            <p class="text-sm text-gray-700 leading-relaxed mb-2">
-                                衆院選が27日公示され、与野党とも消費税減税や食料品免税を公約の柱に掲げる。財源の裏付けが争点となり、自民は「責任ある積極財政」、野党は給付金や大企業課税強化などを対比して訴える構図だ。
-                            </p>
-                            <div class="flex items-center justify-between mt-3 pt-3 border-t border-gray-200">
-                                <div class="text-xs text-gray-500">
-                                    <span class="font-semibold">関連:</span> 公示、消費税争点、財源論争
-                                </div>
-                                <a href="https://www.nikkei.com/politics/" target="_blank" rel="noopener noreferrer" class="text-xs bg-indigo-600 text-white px-3 py-1 rounded-lg hover:bg-indigo-700 transition-colors duration-200 flex items-center gap-1">
-                                    <span>参考記事</span>
-                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 共同通信 1月27日 -->
-                    <div class="news-item bg-white rounded-xl shadow-medium p-6 border-l-4 border-orange-600 hover:shadow-strong transition-all duration-300 fade-in-on-scroll flex gap-3" data-parties="all">
-                        <a href="https://www.kyodo.co.jp/news/politics/" target="_blank" rel="noopener noreferrer" class="flex-shrink-0 self-start" aria-label="共同通信 政治">
-                            <img src="https://www.kyodo.co.jp/favicon.ico" alt="" class="w-12 h-12 rounded object-cover bg-gray-100 border border-gray-200" width="48" height="48" loading="lazy" onerror="this.style.display='none';this.nextElementSibling?.classList.remove('hidden')">
-                            <span class="hidden w-12 h-12 rounded bg-orange-100 flex items-center justify-center text-orange-600 font-bold text-lg">共</span>
-                        </a>
-                        <div class="flex-1 min-w-0">
-                            <div class="flex items-start justify-between mb-3">
-                                <div class="flex items-center gap-3">
-                                    <span class="bg-orange-600 text-white px-3 py-1 rounded-lg text-xs font-bold">共同通信</span>
-                                    <span class="text-sm text-gray-500">2026年1月27日</span>
-                                </div>
-                            </div>
-                            <h3 class="text-lg font-bold text-election-navy mb-2">衆院選公示、各党代表が第一声 12日間の選挙戦スタート</h3>
-                            <p class="text-sm text-gray-700 leading-relaxed mb-2">
-                                衆院選が27日公示され、2月8日投開票まで12日間の選挙戦が始まった。高市総理をはじめ与野党の代表・党首が各地で第一声を発し、消費税減税や物価対策、政権選択などを訴えた。
-                            </p>
-                            <div class="flex items-center justify-between mt-3 pt-3 border-t border-gray-200">
-                                <div class="text-xs text-gray-500">
-                                    <span class="font-semibold">関連:</span> 衆院選公示、各党第一声、選挙戦
-                                </div>
-                                <a href="https://www.kyodo.co.jp/news/politics/" target="_blank" rel="noopener noreferrer" class="text-xs bg-orange-600 text-white px-3 py-1 rounded-lg hover:bg-orange-700 transition-colors duration-200 flex items-center gap-1">
-                                    <span>参考記事</span>
-                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="news-item bg-white rounded-xl shadow-medium p-6 border-l-4 border-orange-600 hover:shadow-strong transition-all duration-300 fade-in-on-scroll flex gap-3" data-parties="kokumin">
-                        <a href="https://www.kyodo.co.jp/news/politics/" target="_blank" rel="noopener noreferrer" class="flex-shrink-0 self-start" aria-label="共同通信 政治">
-                            <img src="https://www.kyodo.co.jp/favicon.ico" alt="" class="w-12 h-12 rounded object-cover bg-gray-100 border border-gray-200" width="48" height="48" loading="lazy" onerror="this.style.display='none';this.nextElementSibling?.classList.remove('hidden')">
-                            <span class="hidden w-12 h-12 rounded bg-orange-100 flex items-center justify-center text-orange-600 font-bold text-lg">共</span>
-                        </a>
-                        <div class="flex-1 min-w-0">
-                            <div class="flex items-start justify-between mb-3">
-                                <div class="flex items-center gap-3">
-                                    <span class="bg-orange-600 text-white px-3 py-1 rounded-lg text-xs font-bold">共同通信</span>
-                                    <span class="text-sm text-gray-500">2026年1月27日</span>
-                                </div>
-                            </div>
-                            <h3 class="text-lg font-bold text-election-navy mb-2">国民・玉木代表「建設的野党で政権与党けん制」</h3>
-                            <p class="text-sm text-gray-700 leading-relaxed mb-2">
-                                国民民主党の玉木雄一郎代表は27日、公示日に会見し「過半数割れさせ、建設的な野党として政権与党をけん制する。政策本位で国民の選択肢を広げる」と述べた。野党連合とは連携しつつ独自路線も打ち出す方針だ。
-                            </p>
-                            <div class="flex items-center justify-between mt-3 pt-3 border-t border-gray-200">
-                                <div class="text-xs text-gray-500">
-                                    <span class="font-semibold">関連:</span> 国民民主党、玉木代表、公示日
-                                </div>
-                                <a href="https://www.kyodo.co.jp/news/politics/" target="_blank" rel="noopener noreferrer" class="text-xs bg-orange-600 text-white px-3 py-1 rounded-lg hover:bg-orange-700 transition-colors duration-200 flex items-center gap-1">
-                                    <span>参考記事</span>
-                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
                 </div>
                 </div>
             </div>
@@ -1533,8 +1240,8 @@
                     <span class="text-sm text-gray-500 font-normal">YouTubeなどの動画コンテンツ</span>
                 </h3>
                 
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                    <!-- 高市総理 政策演説（衆院本会議・直近） -->
+                <div id="news-videos-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <!-- 高市総理 政策演説（衆院本会議・直近） data/videos.json の newsVideos から js/load-data.js で描画 -->
                     <div class="news-item bg-white rounded-xl shadow-medium p-4 border-l-4 border-red-600 hover:shadow-strong transition-all duration-300 fade-in-on-scroll" data-parties="jimin">
                         <div class="flex items-center gap-2 mb-3">
                             <span class="bg-red-600 text-white px-2 py-1 rounded text-xs font-bold">YouTube</span>
@@ -2713,6 +2420,7 @@
         </div>
     </footer>
 
+    <script src="js/load-data.js"></script>
     <script>
         // ========== カウントダウン機能 ==========
         function updateCountdown() {
@@ -3233,6 +2941,7 @@
                 }, { passive: true });
             });
         }
+        window.reinitLiteYouTube = function(){ if(typeof initLiteYouTube==='function') initLiteYouTube(); };
         
         // ========== ふりがな表示切り替え機能 ==========
         function toggleFurigana() {

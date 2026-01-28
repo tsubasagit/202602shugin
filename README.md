@@ -13,3 +13,19 @@
 ---
 
 **サイト**: [GitHub Pages](https://tsubasagit.github.io/202602shugin/)
+
+## 開発者向け
+
+### 記事・動画の管理
+
+記事・動画は別ファイルで管理しています。追加・修正するときは次のJSONを編集してください。
+
+- **`data/articles.json`** … メディアニュース記事（朝日・読売・NHK・毎日・日経・共同など）
+- **`data/videos.json`** … 政党YouTube（`partyVideos`）と動画ニュース（`newsVideos`）
+
+`js/load-data.js` がページ読み込み時にこれらを取得し、ニュース・動画エリアに描画します。
+
+### アクセス計測（Google Analytics 4）
+
+`index.html` の `<head>` 内にある GA4 のスクリプトで、`G-XXXXXXXXXX` を実際の**測定ID**に差し替えてください。  
+[Google アナリティクス](https://analytics.google.com/) でプロパティを作成し、測定IDを取得できます。

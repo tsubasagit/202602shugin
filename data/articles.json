@@ -1,0 +1,112 @@
+[
+  {
+    "parties": "all",
+    "media": "朝日新聞",
+    "mediaClass": "red",
+    "favicon": "https://www.asahi.com/favicon.ico",
+    "date": "2026年1月27日 朝刊",
+    "title": "衆院選が公示、立候補届出始まる",
+    "excerpt": "第51回衆議院議員総選挙が27日公示された。2月8日投開票に向け、各選挙区で立候補の届出が始まった。小選挙区289、比例11ブロックで、与野党の争いが本格化する。",
+    "link": "https://www.asahi.com/politics/",
+    "tags": "衆院選公示、立候補届出、選挙戦"
+  },
+  {
+    "parties": "jimin",
+    "media": "朝日新聞",
+    "mediaClass": "red",
+    "favicon": "https://www.asahi.com/favicon.ico",
+    "date": "2026年1月27日",
+    "title": "高市総理、公示日に「国民の信を問う」と街頭へ",
+    "excerpt": "高市早苗総理大臣は27日、衆院選公示を受け都内で街頭演説。「食料品免税など重要な政策を実現するため、必ず国民の信を問う」と訴えた。与党は過半数維持を目指し、公示日から選挙戦に全力で取り組む構えだ。",
+    "link": "https://www.asahi.com/politics/",
+    "tags": "高市総理、公示日、街頭演説"
+  },
+  {
+    "parties": "all",
+    "media": "読売新聞",
+    "mediaClass": "blue",
+    "favicon": "https://www.yomiuri.co.jp/favicon.ico",
+    "date": "2026年1月27日 朝刊",
+    "title": "衆院選公示で選挙戦本格化、各党が第一声",
+    "excerpt": "衆院選が27日公示され、12日間の選挙戦がスタートした。与野党各党の代表・党首は公示日、各地で第一声を発し、消費税減税や物価対策、政権選択など争点ごとに訴えを強めた。",
+    "link": "https://www.yomiuri.co.jp/politics/",
+    "tags": "公示、選挙戦、各党第一声"
+  },
+  {
+    "parties": "chudo rikken komei",
+    "media": "読売新聞",
+    "mediaClass": "blue",
+    "favicon": "https://www.yomiuri.co.jp/favicon.ico",
+    "date": "2026年1月27日",
+    "title": "中道改革連合・野田代表「政権交代で生活守る」",
+    "excerpt": "中道改革連合の野田佳彦共同代表は27日、公示に合わせて街頭で演説。「政権交代を実現し、給付金や物価対策で国民の生活を守る」と訴えた。立憲・公明系の野党第一党として、公示日から選挙戦を本格化させた。",
+    "link": "https://www.yomiuri.co.jp/politics/",
+    "tags": "中道改革連合、野田代表、政権交代"
+  },
+  {
+    "parties": "all",
+    "media": "NHK",
+    "mediaClass": "purple",
+    "favicon": "https://www.nhk.or.jp/favicon.ico",
+    "date": "2026年1月27日",
+    "title": "衆院選が公示、289小選挙区で争い本格化",
+    "excerpt": "第51回衆議院議員総選挙が27日午前、公示された。小選挙区289と比例代表11ブロックで、2月8日の投開票日まで12日間の選挙戦が始まった。期日前投票は1月29日から始まる。",
+    "link": "https://www3.nhk.or.jp/news/cat04.html",
+    "tags": "衆院選公示、小選挙区、期日前投票"
+  },
+  {
+    "parties": "ishin",
+    "media": "NHK",
+    "mediaClass": "purple",
+    "favicon": "https://www.nhk.or.jp/favicon.ico",
+    "date": "2026年1月27日",
+    "title": "維新・藤田共同代表「38議席以上めざす」",
+    "excerpt": "日本維新の会の藤田文武共同代表は27日、公示日にあたり会見で「前回の38議席を上回る獲得を目指す。消費税減税など公約の実現に全力を尽くす」と述べた。与党として過半数維持も訴えていく方針だ。",
+    "link": "https://www3.nhk.or.jp/news/cat04.html",
+    "tags": "日本維新の会、藤田代表、公示日"
+  },
+  {
+    "parties": "kyosan",
+    "media": "毎日新聞",
+    "mediaClass": "green",
+    "favicon": "https://mainichi.jp/favicon.ico",
+    "date": "2026年1月27日 朝刊",
+    "title": "共産・田村委員長「消費税5%減税で庶民の味方に」",
+    "excerpt": "日本共産党の田村智子委員長は27日、衆院選公示を受け記者会見。「消費税5%減税と食料品無税化で、庶民の暮らしを守る選択肢を示す」と述べた。大企業・富裕層への課税強化で財源を確保する方針を改めて強調した。",
+    "link": "https://mainichi.jp/seiji/",
+    "tags": "日本共産党、田村委員長、公示日"
+  },
+  {
+    "parties": "all",
+    "media": "日経新聞",
+    "mediaClass": "indigo",
+    "favicon": "https://www.nikkei.com/favicon.ico",
+    "date": "2026年1月27日 朝刊",
+    "title": "衆院選公示、消費税・財源が最大争点に",
+    "excerpt": "衆院選が27日公示され、与野党とも消費税減税や食料品免税を公約の柱に掲げる。財源の裏付けが争点となり、自民は「責任ある積極財政」、野党は給付金や大企業課税強化などを対比して訴える構図だ。",
+    "link": "https://www.nikkei.com/politics/",
+    "tags": "公示、消費税争点、財源論争"
+  },
+  {
+    "parties": "all",
+    "media": "共同通信",
+    "mediaClass": "orange",
+    "favicon": "https://www.kyodo.co.jp/favicon.ico",
+    "date": "2026年1月27日",
+    "title": "衆院選公示、各党代表が第一声 12日間の選挙戦スタート",
+    "excerpt": "衆院選が27日公示され、2月8日投開票まで12日間の選挙戦が始まった。高市総理をはじめ与野党の代表・党首が各地で第一声を発し、消費税減税や物価対策、政権選択などを訴えた。",
+    "link": "https://www.kyodo.co.jp/news/politics/",
+    "tags": "衆院選公示、各党第一声、選挙戦"
+  },
+  {
+    "parties": "kokumin",
+    "media": "共同通信",
+    "mediaClass": "orange",
+    "favicon": "https://www.kyodo.co.jp/favicon.ico",
+    "date": "2026年1月27日",
+    "title": "国民・玉木代表「建設的野党で政権与党けん制」",
+    "excerpt": "国民民主党の玉木雄一郎代表は27日、公示日に会見し「過半数割れさせ、建設的な野党として政権与党をけん制する。政策本位で国民の選択肢を広げる」と述べた。野党連合とは連携しつつ独自路線も打ち出す方針だ。",
+    "link": "https://www.kyodo.co.jp/news/politics/",
+    "tags": "国民民主党、玉木代表、公示日"
+  }
+]

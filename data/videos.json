@@ -1,0 +1,21 @@
+{
+  "partyVideos": [
+    { "party": "自民党", "videoId": "lRAK8w9ysbM", "parties": "jimin", "caption": "【高市総裁メッセージ】あなたの一票を自民党へ", "buttonClass": "blue" },
+    { "party": "中道改革連合（立憲/公明）", "videoId": "HF-apDPVq9k", "parties": "chudo rikken komei", "caption": "YouTubeで見る", "buttonClass": "green" },
+    { "party": "公明党", "videoId": "z4zmcTIgqfs", "parties": "komei", "caption": "YouTubeで見る", "buttonClass": "yellow" },
+    { "party": "日本維新の会", "videoId": "us1Hu9XVrDQ", "parties": "ishin", "caption": "YouTubeで見る", "buttonClass": "orange" },
+    { "party": "国民民主党", "videoId": "9mqIt3YvhyE", "parties": "kokumin", "caption": "YouTubeで見る", "buttonClass": "purple" },
+    { "party": "日本共産党", "videoId": "hZdeeqfKrRg", "parties": "kyosan", "caption": "YouTubeで見る", "buttonClass": "red" },
+    { "party": "れいわ新選組", "channelUrl": "https://www.youtube.com/channel/UCgIIlSmbGB5Tn9_zzYMCuNQ/videos", "parties": "reiwa", "caption": "公式チャンネル（動画一覧）", "buttonClass": "pink" },
+    { "party": "社民党", "channelUrl": "https://www.youtube.com/user/shaminparty/videos", "parties": "shamin", "caption": "公式チャンネル（動画一覧）", "buttonClass": "cyan" },
+    { "party": "参政党", "channelUrl": "https://www.youtube.com/channel/UCjrN-o1HlLk22qcauIKDtlQ", "parties": "sansei", "caption": "公式チャンネル（動画一覧）", "buttonClass": "amber" },
+    { "party": "日本保守党", "videoId": "NzdYwGKG2xw", "parties": "hoshu", "caption": "YouTubeで見る", "buttonClass": "indigo" },
+    { "party": "チームみらい", "videoId": "sJ9GW7QYbAc", "parties": "mirai", "caption": "YouTubeで見る", "buttonClass": "teal" }
+  ],
+  "newsVideos": [
+    { "title": "高市総理、衆議院本会議での政策演説", "type": "embed", "videoId": "cjDHxBi0UVQ", "parties": "jimin", "label": "YouTube", "labelClass": "red", "sub": "衆院選期の政策演説" },
+    { "title": "中道改革連合（立憲・公明）衆院選関連", "type": "link", "url": "https://www.youtube.com/c/rikkenminshu/videos", "parties": "chudo rikken komei", "label": "YouTube", "labelClass": "green", "sub": "直近の会見・討論は公式で", "linkText": "立憲民主党 公式YouTube" },
+    { "title": "日本維新の会 衆院選関連", "type": "link", "url": "https://www.youtube.com/user/nipponishin/videos", "parties": "ishin", "label": "YouTube", "labelClass": "orange", "sub": "直近の会見・政策は公式で", "linkText": "日本維新の会 公式YouTube" },
+    { "title": "【衆院選】党首討論会など（日本記者クラブ）", "type": "link", "url": "https://www.videonews.com/channel/press-club", "parties": "all", "label": "VideoNews", "labelClass": "purple", "sub": "2026年1月26日", "linkText": "VideoNews プレスクラブ" }
+  ]
+}

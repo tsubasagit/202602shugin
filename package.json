@@ -1,0 +1,21 @@
+{
+  "name": "shuinsen2026",
+  "version": "1.0.0",
+  "description": "2026年衆院選 政策比較ガイド",
+  "main": "index.html",
+  "scripts": {
+    "collect-analytics": "node scripts/collect-analytics.js"
+  },
+  "keywords": [
+    "election",
+    "politics",
+    "japan",
+    "civic-tech"
+  ],
+  "author": "AppTalentHub",
+  "license": "MIT",
+  "dependencies": {
+    "@octokit/rest": "^20.0.0"
+  },
+  "devDependencies": {}
+}
