@@ -2422,7 +2422,7 @@
                 <div class="mt-2 flex items-center justify-center gap-3 text-xs text-gray-300 opacity-80">
                     <span class="whitespace-nowrap">プロトタイプ開発のラピットくん</span>
                     <img
-                        src="assets/c__Users_tsuba_AppData_Roaming_Cursor_User_workspaceStorage_46fdcbbf3426087f60ede007f17d06d6_images________________-04db3a93-7f6e-42f5-8912-1582790e2895.png"
+                        src="assets/rapitkun.png"
                         alt="サイトマスコットキャラクター"
                         class="w-10 h-10 inline-block rounded-full shadow-sm border border-white/40 bg-white/70"
                         loading="lazy"
@@ -2473,16 +2473,52 @@
         window.goToTop = goToTop;
 
         // ========== トップに最新お知らせを表示 ==========
+        // ニュース一覧の中から「一番新しい日付」の記事だけを抽出して表示する
+        function parseNewsDate(dateText) {
+            if (!dateText) return null;
+            const base = String(dateText).split(' ')[0]; // 「2026年1月27日 朝刊」→「2026年1月27日」
+            const m = base.match(/(\d+)年(\d+)月(\d+)日/);
+            if (!m) return null;
+            const y = Number(m[1]);
+            const mo = Number(m[2]);
+            const d = Number(m[3]);
+            if (!y || !mo || !d) return null;
+            return new Date(y, mo - 1, d);
+        }
+
         function initLatestNewsOnTop() {
             const container = document.getElementById('latest-news-on-top');
             const newsContainer = document.getElementById('news-container');
             if (!container || !newsContainer) return;
-            const items = newsContainer.querySelectorAll('.news-item');
-            const latestCount = 5;
+
+            const nodes = Array.from(newsContainer.querySelectorAll('.news-item'));
+            if (!nodes.length) return;
+
+            // 各カードから日付を取得して最も新しい日付を求める
+            let latestTime = null;
+            const withDates = nodes.map(node => {
+                const dateEl = node.querySelector('.text-sm.text-gray-500');
+                const dateText = dateEl ? dateEl.textContent.trim() : '';
+                const d = parseNewsDate(dateText);
+                const t = d ? d.getTime() : null;
+                if (t !== null && (latestTime === null || t > latestTime)) {
+                    latestTime = t;
+                }
+                return { node, time: t };
+            });
+
+            if (latestTime === null) return;
+
+            // 最新日付のカードだけを最大5件まで表示
+            const latestNodes = withDates
+                .filter(item => item.time === latestTime)
+                .slice(0, 5)
+                .map(item => item.node);
+
             container.innerHTML = '';
-            for (let i = 0; i < Math.min(latestCount, items.length); i++) {
-                container.appendChild(items[i].cloneNode(true));
-            }
+            latestNodes.forEach(n => {
+                container.appendChild(n.cloneNode(true));
+            });
         }
 
         // ========== Intersection Observer: 遅延読み込み（最新技術） ==========
