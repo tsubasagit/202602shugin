@@ -136,6 +136,18 @@
     return base;
   }
 
+  /** 記事の date 文字列（例: 2026年1月28日 / 2026年1月27日 朝刊）をタイムスタンプに変換。比較用。 */
+  function parseArticleDate(article) {
+    var dateText = article && article.date ? String(article.date).split(' ')[0] : '';
+    var m = dateText.match(/(\d+)年(\d+)月(\d+)日/);
+    if (!m) return null;
+    var y = parseInt(m[1], 10);
+    var mo = parseInt(m[2], 10);
+    var d = parseInt(m[3], 10);
+    if (!y || !mo || !d) return null;
+    return new Date(y, mo - 1, d).getTime();
+  }
+
   function run() {
     var newsEl = document.getElementById('news-container');
     var newsAllEl = document.getElementById('news-articles-list');
@@ -153,7 +165,17 @@
       var newsVideos = videos.newsVideos || [];
 
       if (newsEl) {
-        var latest = articles.slice(0, LATEST_ARTICLES_COUNT);
+        var maxTime = null;
+        for (var i = 0; i < articles.length; i++) {
+          var t = parseArticleDate(articles[i]);
+          if (t != null && (maxTime === null || t > maxTime)) maxTime = t;
+        }
+        var latest = [];
+        if (maxTime != null) {
+          for (var j = 0; j < articles.length && latest.length < LATEST_ARTICLES_COUNT; j++) {
+            if (parseArticleDate(articles[j]) === maxTime) latest.push(articles[j]);
+          }
+        }
         newsEl.innerHTML = latest.length ? latest.map(renderArticle).join('') : '<p class="text-gray-500 text-center py-8">記事はありません。</p>';
       }
       if (newsAllEl) {
