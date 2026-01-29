@@ -22,9 +22,11 @@
       '<img src="' + (a.favicon || '') + '" alt="" class="w-12 h-12 rounded object-cover bg-gray-100 border border-gray-200" width="48" height="48" loading="lazy" onerror="this.style.display=\'none\';this.nextElementSibling&&this.nextElementSibling.classList.remove(\'hidden\')">' +
       '<span class="hidden w-12 h-12 rounded ' + badgeCls + ' flex items-center justify-center font-bold text-lg">' + fallback + '</span></a>' +
       '<div class="flex-1 min-w-0">' +
-      '<div class="flex items-start justify-between mb-3"><div class="flex items-center gap-3">' +
+      '<div class="flex items-start justify-between mb-3"><div class="flex items-center gap-3 flex-wrap">' +
       '<span class="' + parts[3] + ' text-white px-3 py-1 rounded-lg text-xs font-bold">' + (a.media || '') + '</span>' +
-      '<span class="text-sm text-gray-500">' + (a.date || '') + '</span></div></div>' +
+      '<span class="text-sm text-gray-500">' + (a.date || '') + '</span>' +
+      (a.政党 ? '<span class="text-xs text-gray-600 bg-gray-100 px-2 py-0.5 rounded" title="フィルター: この記事が表示される政党">' + a.政党 + '</span>' : '') +
+      '</div></div>' +
       '<h3 class="text-lg font-bold text-election-navy mb-2">' +
         '<a href="' + (a.link || '#') + '" target="_blank" rel="noopener noreferrer" class="hover:underline" title="記事を開く（外部サイト）">' +
           (a.title || '') +
@@ -164,20 +166,41 @@
       var partyVideos = videos.partyVideos || [];
       var newsVideos = videos.newsVideos || [];
 
-      if (newsEl) {
-        var maxTime = null;
-        for (var i = 0; i < articles.length; i++) {
-          var t = parseArticleDate(articles[i]);
-          if (t != null && (maxTime === null || t > maxTime)) maxTime = t;
-        }
+      // 最新日付（トップ表示用）を一度だけ計算
+      var maxTime = null;
+      for (var i = 0; i < articles.length; i++) {
+        var t = parseArticleDate(articles[i]);
+        if (t != null && (maxTime === null || t > maxTime)) maxTime = t;
+      }
+
+      function matchesParty(article, partyCode) {
+        if (!partyCode || partyCode === 'all') return true;
+        var p = (article && article.parties ? String(article.parties) : '').trim();
+        if (!p) return false;
+        // "jimin ishin" のようなスペース区切りにも対応
+        return p === partyCode || p.indexOf(partyCode) >= 0;
+      }
+
+      // トップのニュース（#news-container）を、最新日付×政党フィルターで再描画する関数を公開
+      function renderTopNews(partyCode) {
+        if (!newsEl) return;
         var latest = [];
         if (maxTime != null) {
           for (var j = 0; j < articles.length && latest.length < LATEST_ARTICLES_COUNT; j++) {
-            if (parseArticleDate(articles[j]) === maxTime) latest.push(articles[j]);
+            if (parseArticleDate(articles[j]) === maxTime && matchesParty(articles[j], partyCode)) {
+              latest.push(articles[j]);
+            }
           }
         }
-        newsEl.innerHTML = latest.length ? latest.map(renderArticle).join('') : '<p class="text-gray-500 text-center py-8">記事はありません。</p>';
+        newsEl.innerHTML = latest.length
+          ? latest.map(renderArticle).join('')
+          : '<p class="text-gray-500 text-center py-8">選択された政党に関連する最新記事はありません。</p>';
       }
+      window.__renderTopNews = renderTopNews;
+
+      // 初回は「すべて」でトップを描画
+      if (newsEl) renderTopNews('all');
+
       if (newsAllEl) {
         newsAllEl.innerHTML = articles.length ? articles.map(renderArticle).join('') : '<p class="text-gray-500 text-center py-8">記事はありません。</p>';
       }

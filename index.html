@@ -2653,22 +2653,39 @@
         // グローバルに公開（View Transitions用）
         window.showTabInternal = showTabInternal;
 
-        // ========== 政党フィルター（ニュースタブ・記事一覧タブ共通） ==========
+        // ========== 政党フィルター（ニュースタブ・記事一覧タブ共通。記事＋動画ニュースに適用） ==========
         function filterNewsByParty(partyCode) {
             const articlesTab = document.getElementById('content-news-articles');
             const isArticlesTab = articlesTab && !articlesTab.classList.contains('hidden');
-            const container = isArticlesTab ? document.getElementById('news-articles-list') : document.getElementById('news-container');
-            const btnClass = isArticlesTab ? 'news-filter-btn-articles' : 'news-filter-btn';
-            if (!container) return;
-            const items = container.querySelectorAll('.news-item');
             const partyMap = { all: '', jimin: 'jimin', chudo: 'chudo', rikken: 'rikken', komei: 'komei', ishin: 'ishin', kokumin: 'kokumin', kyosan: 'kyosan', mirai: 'mirai' };
             const match = partyMap[partyCode];
-            items.forEach(el => {
+
+            function applyFilter(el) {
                 const p = (el.getAttribute('data-parties') || '').trim();
                 const show = !match || p === match || (p.indexOf(match) >= 0);
                 el.style.display = show ? '' : 'none';
-            });
-            document.querySelectorAll('.' + btnClass).forEach(btn => {
+            }
+
+            // ニュースタブ（トップ）のフィルターボタンを押したら「過去記事一覧」へ移動してから絞り込む
+            // （トップは最新5件のみのため、ここで絞ると“出ない”ケースが多い）
+            if (!isArticlesTab) {
+                if (typeof window.showTabInternal === 'function') {
+                    window.showTabInternal('news-articles');
+                } else if (typeof window.showTab === 'function') {
+                    window.showTab('news-articles');
+                }
+                // タブ切り替え後に改めて適用（isArticlesTab を再判定）
+                setTimeout(() => filterNewsByParty(partyCode), 0);
+                return;
+            }
+
+            const container = document.getElementById('news-articles-list');
+            if (container) {
+                container.querySelectorAll('.news-item').forEach(applyFilter);
+            }
+
+            // ボタンの見た目はニュースタブ/記事一覧タブの両方を同期
+            document.querySelectorAll('.news-filter-btn, .news-filter-btn-articles').forEach(btn => {
                 const active = (btn.getAttribute('data-party') || '') === partyCode;
                 btn.classList.toggle('active', active);
                 btn.classList.toggle('bg-blue-600', active);
@@ -2932,70 +2949,7 @@
         window.clearAnalytics = clearAnalytics;
         window.refreshAnalytics = refreshAnalytics;
         
-        // ========== メディアニュース 政党フィルター機能 ==========
-        function filterNewsByParty(party) {
-            // フィルターボタンのスタイルを更新
-            document.querySelectorAll('.news-filter-btn').forEach(btn => {
-                btn.classList.remove('active', 'bg-blue-600', 'text-white');
-                btn.classList.add('bg-gray-200', 'text-gray-700');
-            });
-            
-            // 選択されたボタンをアクティブに
-            const activeBtn = document.querySelector(`[data-party="${party}"]`);
-            if (activeBtn) {
-                activeBtn.classList.remove('bg-gray-200', 'text-gray-700');
-                activeBtn.classList.add('active', 'bg-blue-600', 'text-white');
-            }
-            
-            // ニュース記事をフィルタリング
-            const newsItems = document.querySelectorAll('.news-item');
-            let visibleCount = 0;
-            
-            newsItems.forEach(item => {
-                const parties = item.getAttribute('data-parties');
-                const shouldShow = party === 'all' || parties.includes(party);
-                
-                if (shouldShow) {
-                    item.style.display = 'block';
-                    item.style.opacity = '0';
-                    setTimeout(() => {
-                        item.style.transition = 'opacity 0.3s ease';
-                        item.style.opacity = '1';
-                    }, 10);
-                    visibleCount++;
-                } else {
-                    item.style.display = 'none';
-                }
-            });
-
-            // 動画カードも同じ条件でフィルタ
-            document.querySelectorAll('.video-item').forEach(item => {
-                const parties = item.getAttribute('data-parties') || '';
-                const shouldShow = party === 'all' || parties.includes(party) || parties.includes('all');
-                item.style.display = shouldShow ? 'block' : 'none';
-            });
-            
-            // 結果がない場合のメッセージ
-            const container = document.getElementById('news-container');
-            let noResultsMsg = document.getElementById('no-results-message');
-            
-            if (visibleCount === 0) {
-                if (!noResultsMsg) {
-                    noResultsMsg = document.createElement('div');
-                    noResultsMsg.id = 'no-results-message';
-                    noResultsMsg.className = 'bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded-lg text-center';
-                    noResultsMsg.innerHTML = '<p class="text-gray-700">選択された政党に関連するニュースはありません。</p>';
-                    container.appendChild(noResultsMsg);
-                }
-            } else {
-                if (noResultsMsg) {
-                    noResultsMsg.remove();
-                }
-            }
-        }
-        
-        // グローバルに公開
-        window.filterNewsByParty = filterNewsByParty;
+        // ※重複していた filterNewsByParty は上の共通実装に統一
 
         // ========== 軽量YouTube埋め込み（クリックでiframe生成） ==========
         function initLiteYouTube() {

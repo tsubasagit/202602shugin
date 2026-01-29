@@ -1,6 +1,8 @@
 # 2026 衆院選 政策比較ガイド
 
-このサイトの運営方針・情報の取り扱いです。
+![2026 衆院選 政策比較ガイド - Top](assets/top.png)
+
+このサイトの概要と情報の取り扱いです。
 
 ## このサイトについて・情報の取り扱い
 
@@ -15,6 +17,15 @@
 **サイト**: [GitHub Pages](https://tsubasagit.github.io/202602shugin/)
 
 ## 開発者向け
+
+### コミットメッセージ (Commit messages)
+
+Please use **English** for commit messages so that history stays readable and avoids encoding/typo issues.
+
+例: `Add top image to README`, `Fix article link matching`
+
+このリポジトリには `.gitmessage` が含まれています。コミット時に英語のテンプレートを使うには:  
+`git config commit.template .gitmessage` を一度実行してください。
 
 ### 記事・動画の管理
 
