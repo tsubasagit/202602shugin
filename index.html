@@ -1485,22 +1485,35 @@
             </div>
         </section>
 
-        <!-- 記事一覧・似た記事ページ（記事が増えたときの別表示用） -->
+        <!-- 記事一覧・似た記事ページ（サイドバー＋政党フィルター＋記事一覧のみ表示） -->
         <section id="content-news-articles" class="tab-content hidden">
             <div class="mb-6">
                 <button type="button" onclick="showTab('news')" class="text-election-blue hover:underline flex items-center gap-1 text-sm font-semibold mb-4">
                     <span>← ニュースに戻る</span>
                 </button>
             </div>
-            <h2 class="text-2xl font-bold text-election-navy mb-6 title-decoration">📰 記事一覧・似た記事</h2>
-            <p class="text-sm text-gray-600 mb-6">ニュース記事を一覧で表示します。記事が増えたときはこのページで一覧をご確認いただけます。似た記事（同じ政党の記事）はニュースタブの政党フィルターで絞り込めます。</p>
+            <h2 class="text-2xl font-bold text-election-navy mb-6 title-decoration">📰 記事一覧</h2>
+
+            <!-- 政党フィルター（記事一覧タブ用） -->
+            <div class="mb-6 bg-white rounded-xl shadow-soft p-4">
+                <div class="flex items-center gap-2 mb-3">
+                    <span class="text-sm font-semibold text-gray-700">🔍 政党でフィルター:</span>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                    <button onclick="filterNewsByParty('all')" class="news-filter-btn-articles active px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 bg-blue-600 text-white hover:bg-blue-700" data-party="all">すべて</button>
+                    <button onclick="filterNewsByParty('jimin')" class="news-filter-btn-articles px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 bg-gray-200 text-gray-700 hover:bg-gray-300" data-party="jimin">自民党</button>
+                    <button onclick="filterNewsByParty('chudo')" class="news-filter-btn-articles px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 bg-gray-200 text-gray-700 hover:bg-gray-300" data-party="chudo">中道改革連合</button>
+                    <button onclick="filterNewsByParty('rikken')" class="news-filter-btn-articles px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 bg-gray-200 text-gray-700 hover:bg-gray-300" data-party="rikken">立憲民主党</button>
+                    <button onclick="filterNewsByParty('komei')" class="news-filter-btn-articles px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 bg-gray-200 text-gray-700 hover:bg-gray-300" data-party="komei">公明党</button>
+                    <button onclick="filterNewsByParty('ishin')" class="news-filter-btn-articles px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 bg-gray-200 text-gray-700 hover:bg-gray-300" data-party="ishin">日本維新の会</button>
+                    <button onclick="filterNewsByParty('kokumin')" class="news-filter-btn-articles px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 bg-gray-200 text-gray-700 hover:bg-gray-300" data-party="kokumin">国民民主党</button>
+                    <button onclick="filterNewsByParty('kyosan')" class="news-filter-btn-articles px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 bg-gray-200 text-gray-700 hover:bg-gray-300" data-party="kyosan">日本共産党</button>
+                    <button onclick="filterNewsByParty('mirai')" class="news-filter-btn-articles px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 bg-gray-200 text-gray-700 hover:bg-gray-300" data-party="mirai">チームみらい</button>
+                </div>
+            </div>
+
             <div id="news-articles-list" class="space-y-4">
                 <!-- ニュースタブの記事一覧をここに表示（showTab時または初回表示時にJSで同期） -->
-            </div>
-            <div class="mt-8 p-4 bg-blue-50 rounded-xl">
-                <h3 class="text-lg font-bold text-election-navy mb-2">似た記事を見つける</h3>
-                <p class="text-sm text-gray-700 mb-2">同じ政党に関連する記事は、ニュースタブの「政党でフィルター」ボタンから絞り込んでご覧いただけます。</p>
-                <button type="button" onclick="showTab('news')" class="text-election-blue font-semibold hover:underline">ニュースタブでフィルターする →</button>
             </div>
         </section>
 
@@ -2639,6 +2652,32 @@
 
         // グローバルに公開（View Transitions用）
         window.showTabInternal = showTabInternal;
+
+        // ========== 政党フィルター（ニュースタブ・記事一覧タブ共通） ==========
+        function filterNewsByParty(partyCode) {
+            const articlesTab = document.getElementById('content-news-articles');
+            const isArticlesTab = articlesTab && !articlesTab.classList.contains('hidden');
+            const container = isArticlesTab ? document.getElementById('news-articles-list') : document.getElementById('news-container');
+            const btnClass = isArticlesTab ? 'news-filter-btn-articles' : 'news-filter-btn';
+            if (!container) return;
+            const items = container.querySelectorAll('.news-item');
+            const partyMap = { all: '', jimin: 'jimin', chudo: 'chudo', rikken: 'rikken', komei: 'komei', ishin: 'ishin', kokumin: 'kokumin', kyosan: 'kyosan', mirai: 'mirai' };
+            const match = partyMap[partyCode];
+            items.forEach(el => {
+                const p = (el.getAttribute('data-parties') || '').trim();
+                const show = !match || p === match || (p.indexOf(match) >= 0);
+                el.style.display = show ? '' : 'none';
+            });
+            document.querySelectorAll('.' + btnClass).forEach(btn => {
+                const active = (btn.getAttribute('data-party') || '') === partyCode;
+                btn.classList.toggle('active', active);
+                btn.classList.toggle('bg-blue-600', active);
+                btn.classList.toggle('text-white', active);
+                btn.classList.toggle('bg-gray-200', !active);
+                btn.classList.toggle('text-gray-700', !active);
+            });
+        }
+        window.filterNewsByParty = filterNewsByParty;
 
         // ========== パララックス効果（ヘッダー以外） ==========
         function initParallax() {
