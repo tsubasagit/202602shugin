@@ -2,6 +2,12 @@
  * 新規記事を data/articles.json の先頭に追加する
  * 使い方: node scripts/add-articles.js
  * 追加する記事は NEW_ARTICLES に定義
+ *
+ * 【ニュース方針】
+ * - 各政党の政策についての発言、代表・党首が話したことを中心にニュースを選ぶ
+ * - 政策の争点をまとめていく（争点ごとの記事も優先して追加する）
+ * - 記事のタイトルは争点・政策が分かる表現に（例：「〇〇党、消費税減税で街頭訴え」）。手続きだけのタイトルは避ける。
+ * - 詳細: docs/NEWS_POLICY.md
  */
 const fs = require('fs');
 const path = require('path');

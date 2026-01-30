@@ -1,0 +1,15 @@
+{
+  "updated": "2026-01-30",
+  "sourceNote": "ネット・ニュースでトレンドのワード（争点・政策を問う形で掲載）",
+  "words": [
+    { "word": "消費税を免税や減税にするか？", "url": "https://www.google.com/search?q=消費税+免税+減税+衆院選" },
+    { "word": "食料品の消費税は免税？減税？", "url": "https://www.google.com/search?q=食料品+消費税+免税+衆院選" },
+    { "word": "衆院選 争点 消費税", "url": "https://www.google.com/search?q=衆院選+争点+消費税+2026" },
+    { "word": "各党の消費税政策 比較", "url": "https://www.google.com/search?q=衆院選+消費税+政策+比較" },
+    { "word": "選択的夫婦別姓 賛成 反対", "url": "https://www.google.com/search?q=選択的夫婦別姓+衆院選" },
+    { "word": "社会保障 年金 医療 各党", "url": "https://www.google.com/search?q=衆院選+社会保障+年金+医療" },
+    { "word": "防衛費 増額 どうする", "url": "https://www.google.com/search?q=衆院選+防衛費+安全保障" },
+    { "word": "衆院選 政策 比較", "url": "https://www.google.com/search?q=衆院選+政策+比較+2026" }
+  ],
+  "trendPageUrl": "https://trends.google.co.jp/trending?geo=JP"
+}

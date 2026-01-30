@@ -15,7 +15,12 @@
   "newsVideos": [
     { "title": "高市総理、衆議院本会議での政策演説", "type": "embed", "videoId": "cjDHxBi0UVQ", "parties": "jimin", "label": "YouTube", "labelClass": "red", "sub": "衆院選期の政策演説" },
     { "title": "中道改革連合（立憲・公明）衆院選関連", "type": "link", "url": "https://www.youtube.com/c/rikkenminshu/videos", "parties": "chudo rikken komei", "label": "YouTube", "labelClass": "green", "sub": "直近の会見・討論は公式で", "linkText": "立憲民主党 公式YouTube" },
-    { "title": "日本維新の会 衆院選関連", "type": "link", "url": "https://www.youtube.com/user/nipponishin/videos", "parties": "ishin", "label": "YouTube", "labelClass": "orange", "sub": "直近の会見・政策は公式で", "linkText": "日本維新の会 公式YouTube" },
-    { "title": "【衆院選】党首討論会など（日本記者クラブ）", "type": "link", "url": "https://www.videonews.com/channel/press-club", "parties": "all", "label": "VideoNews", "labelClass": "purple", "sub": "2026年1月26日", "linkText": "VideoNews プレスクラブ" }
+    { "title": "日本維新の会 衆院選関連", "type": "link", "url": "https://www.youtube.com/user/nipponishin/videos", "parties": "ishin", "label": "YouTube", "labelClass": "orange", "sub": "直近の会見・政策は公式で", "linkText": "日本維新の会 公式YouTube" }
+  ],
+  "evaluatorVideos": [
+    { "evaluator": "日本記者クラブ", "title": "【衆院選】党首討論会・記者会見", "type": "link", "url": "https://www.videonews.com/channel/press-club", "label": "VideoNews", "labelClass": "purple", "sub": "党首討論会・各党代表の会見を配信", "linkText": "VideoNews プレスクラブ" },
+    { "evaluator": "NHK", "title": "衆院選2026 特設サイト・討論番組", "type": "link", "url": "https://www.nhk.or.jp/senkyo/", "label": "NHK", "labelClass": "red", "sub": "日曜討論など選挙特番", "linkText": "NHK 選挙・政治" },
+    { "evaluator": "テレビ東京", "title": "ワールドビジネスサテライト 政治・選挙", "type": "link", "url": "https://www.tv-tokyo.co.jp/wbs/", "label": "テレ東", "labelClass": "blue", "sub": "経済・政策の解説", "linkText": "WBS 番組サイト" },
+    { "evaluator": "ANN", "title": "衆院選 ニュース・討論", "type": "link", "url": "https://news.tv-asahi.co.jp/news_politics/", "label": "テレ朝", "labelClass": "green", "sub": "政治ニュース・党首討論", "linkText": "テレ朝ニュース 政治" }
   ]
 }

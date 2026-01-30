@@ -28,14 +28,14 @@
       (a.政党 ? '<span class="text-xs text-gray-600 bg-gray-100 px-2 py-0.5 rounded" title="フィルター: この記事が表示される政党">' + a.政党 + '</span>' : '') +
       '</div></div>' +
       '<h3 class="text-lg font-bold text-election-navy mb-2">' +
-        '<a href="' + (a.link || '#') + '" target="_blank" rel="noopener noreferrer" class="hover:underline" title="記事を開く（外部サイト）">' +
+        '<a href="' + (a.link || '#') + '" target="_blank" rel="noopener noreferrer" class="hover:underline" title="' + (a.media || '') + '（政治面・関連ニュース）を開く">' +
           (a.title || '') +
         '</a>' +
       '</h3>' +
       '<p class="text-sm text-gray-700 leading-relaxed mb-2">' + (a.excerpt || '') + '</p>' +
       '<div class="flex items-center justify-between mt-3 pt-3 border-t border-gray-200">' +
       '<div class="text-xs text-gray-500"><span class="font-semibold">関連:</span> ' + (a.tags || '') + '</div>' +
-      '<a href="' + (a.link || '#') + '" target="_blank" rel="noopener noreferrer" class="' + btnCls + '" title="記事を開く（外部サイト）"><span>記事を開く</span><svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg></a>' +
+      '<a href="' + (a.link || '#') + '" target="_blank" rel="noopener noreferrer" class="' + btnCls + '" title="' + (a.media || '') + '（政治面・関連ニュース）を開く"><span>' + (a.media || '') + '（政治面・関連ニュース）を開く</span><svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg></a>' +
       '</div></div></div>'
     );
   }
@@ -47,7 +47,7 @@
     var link = hasId ? 'https://www.youtube.com/watch?v=' + v.videoId : (v.channelUrl || '#');
     var linkLabel = hasId ? 'YouTube' : '公式チャンネル';
     var card =
-      '<div class="bg-gray-50 rounded-xl p-4">' +
+      '<div class="news-item bg-gray-50 rounded-xl p-4" data-parties="' + (v.parties || 'all') + '">' +
       '<div class="flex items-center justify-between mb-2">' +
       '<div class="font-bold text-election-navy">' +
       (v.party || '') +
@@ -138,6 +138,37 @@
     return base;
   }
 
+  function renderEvaluatorVideo(e) {
+    var labelClass = e.labelClass || 'purple';
+    var title = e.title || (e.evaluator + ' 動画・討論');
+    var url = e.url || (e.videoId ? 'https://www.youtube.com/watch?v=' + e.videoId : '#');
+    var linkText = e.linkText || e.evaluator;
+    var sub = e.sub || '';
+    var card =
+      '<div class="news-item bg-white rounded-xl shadow-medium p-4 border-l-4 border-' +
+      labelClass +
+      '-600 hover:shadow-strong transition-all duration-300 fade-in-on-scroll" data-parties="all">' +
+      '<div class="flex items-center gap-2 mb-3">' +
+      '<span class="bg-' + labelClass + '-600 text-white px-2 py-1 rounded text-xs font-bold">' + (e.evaluator || e.label || '') + '</span>' +
+      (sub ? '<span class="text-xs text-gray-500">' + sub + '</span>' : '') +
+      '</div>' +
+      '<h4 class="text-base font-bold text-election-navy mb-2">' + title + '</h4>';
+    if (e.type === 'embed' && e.videoId) {
+      card +=
+        '<div class="aspect-video mb-3 rounded-lg overflow-hidden bg-gray-100">' +
+        '<iframe class="w-full h-full" src="https://www.youtube.com/embed/' + e.videoId + '" title="' + title + '" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>';
+    } else {
+      card +=
+        '<div class="aspect-video mb-3 rounded-lg overflow-hidden bg-gray-100 flex items-center justify-center p-4">' +
+        '<a href="' + url + '" target="_blank" rel="noopener noreferrer" class="text-center text-' + labelClass + '-600 hover:text-' + labelClass + '-700 font-semibold">' + linkText + '</a></div>';
+    }
+    card +=
+      '<a href="' + url + '" target="_blank" rel="noopener noreferrer" class="text-xs text-' + labelClass + '-600 hover:opacity-80 flex items-center gap-1"><span>' + linkText + '</span>' +
+      '<svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg></a>' +
+      '</div>';
+    return card;
+  }
+
   /** 記事の date 文字列（例: 2026年1月28日 / 2026年1月27日 朝刊）をタイムスタンプに変換。比較用。 */
   function parseArticleDate(article) {
     var dateText = article && article.date ? String(article.date).split(' ')[0] : '';
@@ -154,17 +185,21 @@
     var newsEl = document.getElementById('news-container');
     var newsAllEl = document.getElementById('news-articles-list');
     var partyGrid = document.getElementById('party-youtube-grid');
+    var partyVideosInNews = document.getElementById('party-videos-in-news');
     var newsVideosGrid = document.getElementById('news-videos-grid');
+    var evaluatorVideosGrid = document.getElementById('evaluator-videos-grid');
     var videosList = document.getElementById('news-videos-list');
+    var evaluatorVideosList = document.getElementById('evaluator-videos-list');
 
     Promise.all([
       fetch(CONFIG.articlesUrl).then(function (r) { return r.ok ? r.json() : []; }),
-      fetch(CONFIG.videosUrl).then(function (r) { return r.ok ? r.json() : { partyVideos: [], newsVideos: [] }; })
+      fetch(CONFIG.videosUrl).then(function (r) { return r.ok ? r.json() : { partyVideos: [], newsVideos: [], evaluatorVideos: [] }; })
     ]).then(function (results) {
       var articles = results[0] || [];
       var videos = results[1] || {};
       var partyVideos = videos.partyVideos || [];
       var newsVideos = videos.newsVideos || [];
+      var evaluatorVideos = videos.evaluatorVideos || [];
 
       // 最新日付（トップ表示用）を一度だけ計算
       var maxTime = null;
@@ -207,11 +242,20 @@
       if (partyGrid) {
         partyGrid.innerHTML = partyVideos.map(renderPartyVideo).join('');
       }
+      if (partyVideosInNews) {
+        partyVideosInNews.innerHTML = partyVideos.map(renderPartyVideo).join('');
+      }
       if (newsVideosGrid) {
         newsVideosGrid.innerHTML = newsVideos.map(renderNewsVideo).join('');
       }
+      if (evaluatorVideosGrid) {
+        evaluatorVideosGrid.innerHTML = evaluatorVideos.map(renderEvaluatorVideo).join('');
+      }
       if (videosList) {
         videosList.innerHTML = partyVideos.map(renderPartyVideo).join('');
+      }
+      if (evaluatorVideosList) {
+        evaluatorVideosList.innerHTML = evaluatorVideos.map(renderEvaluatorVideo).join('');
       }
 
       if (typeof window.reinitLiteYouTube === 'function') {

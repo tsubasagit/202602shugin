@@ -400,7 +400,7 @@
                     </div>
                     <div class="countdown-container text-white px-5 py-3 rounded-xl cursor-pointer">
                         <div class="text-xs md:text-sm opacity-90">あと</div>
-                        <div id="countdown" class="countdown-number number-counter">13</div>
+                        <div id="countdown" class="countdown-number number-counter">9</div>
                         <div class="text-xs md:text-sm opacity-90">日</div>
                     </div>
                 </div>
@@ -408,14 +408,16 @@
         </div>
     </header>
 
-    <!-- メインコンテンツ -->
+    <!-- メインコンテンツ（左）＋サイドバー（右：トレンドワード） -->
     <main class="container mx-auto px-4 py-8">
+        <div class="flex flex-col lg:flex-row gap-8">
+            <div class="flex-1 min-w-0">
         <!-- 前日のニュースサマリー -->
         <section id="previous-day-summary" class="bg-gradient-to-r from-election-navy to-blue-800 text-white rounded-xl shadow-strong p-6 mb-8 info-card">
             <h2 class="text-lg font-bold mb-1 opacity-90">📋 前日のニュースサマリー</h2>
-            <p id="previous-day-summary-date" class="text-sm font-semibold mb-3 text-blue-100">2026年1月28日</p>
+            <p id="previous-day-summary-date" class="text-sm font-semibold mb-3 text-blue-100">2026年1月29日</p>
             <div id="previous-day-summary-body" class="text-sm leading-relaxed text-blue-50">
-                <p class="mb-2">衆院選は27日公示。28日は公示翌日となり、各党が街頭演説で消費税減税や政権選択を訴えた。与党は過半数維持、野党は過半数割れをそれぞれ訴え、期日前投票は29日から開始となる。</p>
+                <p class="mb-2">衆院選の期日前投票が29日、全国で開始。入場券の郵送が遅れている自治体では「手ぶら投票」（身分証のみで投票可）で対応。与野党が街頭で消費税減税や政権選択を訴え、高市首相は過半数奪還で辞任しない意向、共同通信調査では与党が過半数維持の勢いと報じられた。</p>
                 <p class="text-xs text-blue-200 mt-2">※ サマリーは前日付の記事をもとにした要約です。詳細は下方のニュース・記事一覧をご覧ください。</p>
             </div>
         </section>
@@ -1182,6 +1184,12 @@
         <section id="content-news" class="tab-content">
             <h2 class="text-2xl font-bold text-election-navy mb-6 title-decoration">📢 ニュース</h2>
             
+            <div class="bg-gradient-to-r from-blue-50 to-indigo-50 border-l-4 border-election-blue p-4 rounded-xl mb-6 shadow-soft">
+                <p class="text-sm text-gray-700">
+                    <strong>📌 ニュースの取り方:</strong> 各政党の政策についての発言や、代表・党首が話したことを中心にニュースをまとめています。政策の争点も順次まとめていきます。
+                </p>
+            </div>
+            
             <!-- メディアニュースセクション -->
             <div class="mb-8">
                 <h3 class="text-xl font-bold text-election-navy mb-4 flex items-center">
@@ -1249,91 +1257,29 @@
                 </div>
             </div>
 
-            <!-- 動画ニュースセクション -->
+            <!-- 動画ニュースセクション（各政党・評価しているところで抽出） -->
             <div class="mb-8">
                 <h3 class="text-xl font-bold text-election-navy mb-4 flex items-center">
                     <span class="bg-gradient-to-r from-red-500 to-pink-500 text-white px-4 py-2 rounded-lg mr-3 text-sm">🎥 動画ニュース</span>
-                    <span class="text-sm text-gray-500 font-normal">YouTubeなどの動画コンテンツ</span>
+                    <span class="text-sm text-gray-500 font-normal">各政党の動画と、評価・分析しているところを掲載</span>
                 </h3>
-                
+
+                <h4 class="text-lg font-bold text-election-navy mt-6 mb-3">各政党の動画</h4>
+                <p class="text-sm text-gray-600 mb-3">各党の公式メッセージ・衆院選関連動画です。政党フィルターで絞り込めます。</p>
+                <div id="party-videos-in-news" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <!-- data/videos.json の partyVideos から js/load-data.js で描画 -->
+                </div>
+
+                <h4 class="text-lg font-bold text-election-navy mt-8 mb-3">政党の政策演説・会見</h4>
+                <p class="text-sm text-gray-600 mb-3">代表・党首の本会議演説や公式チャンネルの最新動画です。</p>
                 <div id="news-videos-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                    <!-- 高市総理 政策演説（衆院本会議・直近） data/videos.json の newsVideos から js/load-data.js で描画 -->
-                    <div class="news-item bg-white rounded-xl shadow-medium p-4 border-l-4 border-red-600 hover:shadow-strong transition-all duration-300 fade-in-on-scroll" data-parties="jimin">
-                        <div class="flex items-center gap-2 mb-3">
-                            <span class="bg-red-600 text-white px-2 py-1 rounded text-xs font-bold">YouTube</span>
-                            <span class="text-xs text-gray-500">衆院選期の政策演説</span>
-                        </div>
-                        <h4 class="text-base font-bold text-election-navy mb-2">高市総理、衆議院本会議での政策演説</h4>
-                        <div class="aspect-video mb-3 rounded-lg overflow-hidden bg-gray-100">
-                            <iframe class="w-full h-full" src="https://www.youtube.com/embed/cjDHxBi0UVQ" title="高市総理 衆院本会議 政策演説" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-                        </div>
-                        <a href="https://www.youtube.com/watch?v=cjDHxBi0UVQ" target="_blank" rel="noopener noreferrer" class="text-xs text-red-600 hover:text-red-700 flex items-center gap-1">
-                            <span>YouTubeで見る</span>
-                            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
-                            </svg>
-                        </a>
-                    </div>
+                    <!-- data/videos.json の newsVideos から js/load-data.js で描画 -->
+                </div>
 
-                    <!-- 中道改革連合 最新動画（1週間以内は公式チャンネルで） -->
-                    <div class="news-item bg-white rounded-xl shadow-medium p-4 border-l-4 border-green-600 hover:shadow-strong transition-all duration-300 fade-in-on-scroll" data-parties="chudo rikken komei">
-                        <div class="flex items-center gap-2 mb-3">
-                            <span class="bg-green-600 text-white px-2 py-1 rounded text-xs font-bold">YouTube</span>
-                            <span class="text-xs text-gray-500">直近の会見・討論は公式で</span>
-                        </div>
-                        <h4 class="text-base font-bold text-election-navy mb-2">中道改革連合（立憲・公明）衆院選関連</h4>
-                        <div class="aspect-video mb-3 rounded-lg overflow-hidden bg-gray-100 flex items-center justify-center p-4">
-                            <a href="https://www.youtube.com/c/rikkenminshu/videos" target="_blank" rel="noopener noreferrer" class="text-center text-green-600 hover:text-green-700 font-semibold">
-                                立憲民主党 公式YouTube<br><span class="text-sm">（最新動画・1週間以内含む）</span>
-                            </a>
-                        </div>
-                        <a href="https://www.youtube.com/c/rikkenminshu/videos" target="_blank" rel="noopener noreferrer" class="text-xs text-green-600 hover:text-green-700 flex items-center gap-1">
-                            <span>公式YouTubeで最新動画を見る</span>
-                            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
-                            </svg>
-                        </a>
-                    </div>
-
-                    <!-- 維新 衆院選関連（1週間以内は公式チャンネルで） -->
-                    <div class="news-item bg-white rounded-xl shadow-medium p-4 border-l-4 border-orange-600 hover:shadow-strong transition-all duration-300 fade-in-on-scroll" data-parties="ishin">
-                        <div class="flex items-center gap-2 mb-3">
-                            <span class="bg-orange-600 text-white px-2 py-1 rounded text-xs font-bold">YouTube</span>
-                            <span class="text-xs text-gray-500">直近の会見・政策は公式で</span>
-                        </div>
-                        <h4 class="text-base font-bold text-election-navy mb-2">日本維新の会 衆院選関連</h4>
-                        <div class="aspect-video mb-3 rounded-lg overflow-hidden bg-gray-100 flex items-center justify-center p-4">
-                            <a href="https://www.youtube.com/user/nipponishin/videos" target="_blank" rel="noopener noreferrer" class="text-center text-orange-600 hover:text-orange-700 font-semibold">
-                                日本維新の会 公式YouTube<br><span class="text-sm">（最新動画・1週間以内含む）</span>
-                            </a>
-                        </div>
-                        <a href="https://www.youtube.com/user/nipponishin/videos" target="_blank" rel="noopener noreferrer" class="text-xs text-orange-600 hover:text-orange-700 flex items-center gap-1">
-                            <span>公式YouTubeで最新動画を見る</span>
-                            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
-                            </svg>
-                        </a>
-                    </div>
-
-                    <!-- 党首討論会（1月26日・1週間以内） -->
-                    <div class="news-item bg-white rounded-xl shadow-medium p-4 border-l-4 border-purple-600 hover:shadow-strong transition-all duration-300 fade-in-on-scroll" data-parties="all">
-                        <div class="flex items-center gap-2 mb-3">
-                            <span class="bg-purple-600 text-white px-2 py-1 rounded text-xs font-bold">VideoNews</span>
-                            <span class="text-xs text-gray-500">2026年1月26日</span>
-                        </div>
-                        <h4 class="text-base font-bold text-election-navy mb-2">【衆院選】党首討論会など（日本記者クラブ）</h4>
-                        <div class="aspect-video mb-3 rounded-lg overflow-hidden bg-gray-100 flex items-center justify-center p-4">
-                            <a href="https://www.videonews.com/channel/press-club" target="_blank" rel="noopener noreferrer" class="text-center text-purple-600 hover:text-purple-700 font-semibold">
-                                VideoNews プレスクラブ<br><span class="text-sm">党首討論会・記者会見を視聴</span>
-                            </a>
-                        </div>
-                        <a href="https://www.videonews.com/channel/press-club" target="_blank" rel="noopener noreferrer" class="text-xs text-purple-600 hover:text-purple-700 flex items-center gap-1">
-                            <span>VideoNews プレスクラブで視聴</span>
-                            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
-                            </svg>
-                        </a>
-                    </div>
+                <h4 class="text-lg font-bold text-election-navy mt-8 mb-3">評価・分析しているところ</h4>
+                <p class="text-sm text-gray-600 mb-3">党首討論会、記者会見、討論番組など、各党を評価・分析しているメディアの動画・サイトです。</p>
+                <div id="evaluator-videos-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <!-- data/videos.json の evaluatorVideos から js/load-data.js で描画 -->
                 </div>
             </div>
 
@@ -1409,79 +1355,15 @@
                 </button>
             </div>
             <h2 class="text-2xl font-bold text-election-navy mb-6 title-decoration">📺 動画一覧</h2>
-            <p class="text-sm text-gray-600 mb-6">各政党のYouTube動画を一覧で表示します。動画が増えたときはこのページで一覧をご確認いただけます。</p>
+            <p class="text-sm text-gray-600 mb-6">各政党の動画と、評価・分析しているところを一覧で表示します。</p>
+            <h3 class="text-lg font-bold text-election-navy mt-6 mb-3">各政党の動画</h3>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" id="news-videos-list">
-                <!-- 政党一覧のYouTubeと同内容を表示（JSで同期またはここに静的配置） -->
-                <div class="bg-gray-50 rounded-xl p-4">
-                    <div class="flex items-center justify-between mb-2">
-                        <span class="font-bold text-election-navy">自民党</span>
-                        <a class="text-xs bg-blue-600 text-white px-3 py-1 rounded-lg hover:bg-blue-700 transition-colors" href="https://www.youtube.com/watch?v=lRAK8w9ysbM" target="_blank" rel="noopener noreferrer">YouTube</a>
-                    </div>
-                    <div class="lite-yt" data-video-id="lRAK8w9ysbM">
-                        <button type="button" aria-label="YouTubeを再生"><span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></button>
-                    </div>
-                    <p class="text-xs text-gray-600 mt-2">【高市総裁メッセージ】あなたの一票を自民党へ</p>
-                </div>
-                <div class="bg-gray-50 rounded-xl p-4">
-                    <div class="flex items-center justify-between mb-2">
-                        <span class="font-bold text-election-navy">中道改革連合（立憲/公明）</span>
-                        <a class="text-xs bg-green-600 text-white px-3 py-1 rounded-lg hover:bg-green-700 transition-colors" href="https://www.youtube.com/watch?v=HF-apDPVq9k" target="_blank" rel="noopener noreferrer">YouTube</a>
-                    </div>
-                    <div class="lite-yt" data-video-id="HF-apDPVq9k">
-                        <button type="button" aria-label="YouTubeを再生"><span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></button>
-                    </div>
-                    <p class="text-xs text-gray-600 mt-2">YouTubeで見る</p>
-                </div>
-                <div class="bg-gray-50 rounded-xl p-4">
-                    <div class="flex items-center justify-between mb-2">
-                        <span class="font-bold text-election-navy">公明党</span>
-                        <a class="text-xs bg-yellow-600 text-white px-3 py-1 rounded-lg hover:bg-yellow-700 transition-colors" href="https://www.youtube.com/watch?v=z4zmcTIgqfs" target="_blank" rel="noopener noreferrer">YouTube</a>
-                    </div>
-                    <div class="lite-yt" data-video-id="z4zmcTIgqfs">
-                        <button type="button" aria-label="YouTubeを再生"><span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></button>
-                    </div>
-                    <p class="text-xs text-gray-600 mt-2">YouTubeで見る</p>
-                </div>
-                <div class="bg-gray-50 rounded-xl p-4">
-                    <div class="flex items-center justify-between mb-2">
-                        <span class="font-bold text-election-navy">日本維新の会</span>
-                        <a class="text-xs bg-orange-600 text-white px-3 py-1 rounded-lg hover:bg-orange-700 transition-colors" href="https://www.youtube.com/watch?v=us1Hu9XVrDQ" target="_blank" rel="noopener noreferrer">YouTube</a>
-                    </div>
-                    <div class="lite-yt" data-video-id="us1Hu9XVrDQ">
-                        <button type="button" aria-label="YouTubeを再生"><span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></button>
-                    </div>
-                    <p class="text-xs text-gray-600 mt-2">YouTubeで見る</p>
-                </div>
-                <div class="bg-gray-50 rounded-xl p-4">
-                    <div class="flex items-center justify-between mb-2">
-                        <span class="font-bold text-election-navy">国民民主党</span>
-                        <a class="text-xs bg-purple-600 text-white px-3 py-1 rounded-lg hover:bg-purple-700 transition-colors" href="https://www.youtube.com/watch?v=9mqIt3YvhyE" target="_blank" rel="noopener noreferrer">YouTube</a>
-                    </div>
-                    <div class="lite-yt" data-video-id="9mqIt3YvhyE">
-                        <button type="button" aria-label="YouTubeを再生"><span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></button>
-                    </div>
-                    <p class="text-xs text-gray-600 mt-2">YouTubeで見る</p>
-                </div>
-                <div class="bg-gray-50 rounded-xl p-4">
-                    <div class="flex items-center justify-between mb-2">
-                        <span class="font-bold text-election-navy">日本共産党</span>
-                        <a class="text-xs bg-red-600 text-white px-3 py-1 rounded-lg hover:bg-red-700 transition-colors" href="https://www.youtube.com/watch?v=hZdeeqfKrRg" target="_blank" rel="noopener noreferrer">YouTube</a>
-                    </div>
-                    <div class="lite-yt" data-video-id="hZdeeqfKrRg">
-                        <button type="button" aria-label="YouTubeを再生"><span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></button>
-                    </div>
-                    <p class="text-xs text-gray-600 mt-2">YouTubeで見る</p>
-                </div>
-                <div class="bg-gray-50 rounded-xl p-4">
-                    <div class="flex items-center justify-between mb-2">
-                        <span class="font-bold text-election-navy">チームみらい</span>
-                        <a class="text-xs bg-teal-600 text-white px-3 py-1 rounded-lg hover:bg-teal-700 transition-colors" href="https://www.youtube.com/watch?v=sJ9GW7QYbAc" target="_blank" rel="noopener noreferrer">YouTube</a>
-                    </div>
-                    <div class="lite-yt" data-video-id="sJ9GW7QYbAc">
-                        <button type="button" aria-label="YouTubeを再生"><span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></button>
-                    </div>
-                    <p class="text-xs text-gray-600 mt-2">YouTubeで見る</p>
-                </div>
+                <!-- data/videos.json の partyVideos から js/load-data.js で描画 -->
+            </div>
+            <h3 class="text-lg font-bold text-election-navy mt-8 mb-3">評価・分析しているところ</h3>
+            <p class="text-sm text-gray-600 mb-3">党首討論会、記者会見、討論番組など、各党を評価・分析しているメディアの動画・サイトです。</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" id="evaluator-videos-list">
+                <!-- data/videos.json の evaluatorVideos から js/load-data.js で描画 -->
             </div>
         </section>
 
@@ -1515,6 +1397,7 @@
             <div id="news-articles-list" class="space-y-4">
                 <!-- ニュースタブの記事一覧をここに表示（showTab時または初回表示時にJSで同期） -->
             </div>
+            <p class="text-xs text-gray-500 mt-4">＊記事を開くは、各メディアのトップページになります。</p>
         </section>
 
         <!-- アナリティクスタブ -->
@@ -1897,7 +1780,7 @@
             <h2 class="text-2xl font-bold text-election-navy mb-6">📊 議席シミュレーション</h2>
             <div class="bg-gradient-to-r from-yellow-50 to-orange-50 border-l-4 border-yellow-400 p-4 rounded-xl mb-6 shadow-soft">
                 <p class="text-sm text-gray-700">
-                    <strong>⚠️ 注意:</strong> このシミュレーションは最新の世論調査データ（2026年1月25日時点）に基づいた予測です。
+                    <strong>⚠️ 注意:</strong> このシミュレーションは最新の世論調査データ（2026年1月30日時点）に基づいた予測です。
                     実際の選挙結果とは異なる場合があります。参考情報としてご覧ください。
                 </p>
             </div>
@@ -2074,17 +1957,38 @@
             </div>
 
             <div class="bg-white rounded-xl shadow-medium p-6 mt-6 hover:shadow-strong transition-all duration-300">
-                <h3 class="text-xl font-bold text-election-navy mb-4 title-decoration">データソース</h3>
+                <h3 class="text-xl font-bold text-election-navy mb-4 title-decoration">データソース（最新）</h3>
                 <ul class="text-sm text-gray-700 space-y-2">
-                    <li>• 朝日新聞世論調査（2026年1月25日）</li>
-                    <li>• 読売新聞世論調査（2026年1月24日）</li>
-                    <li>• 共同通信世論調査（2026年1月23日）</li>
+                    <li>• 朝日新聞世論調査（2026年1月28日）</li>
+                    <li>• 読売新聞世論調査（2026年1月26日）</li>
+                    <li>• 共同通信世論調査（2026年1月27日）</li>
                     <li>• 各党の支持率データを統合分析</li>
                 </ul>
                 <p class="text-xs text-gray-500 mt-4">
                     ※ 実際の選挙結果は、投票率や地域別の動向により大きく変動する可能性があります。
                 </p>
             </div>
+
+            <!-- 2026年1月25日時点のデータ（参考・折りたたみ） -->
+            <details class="bg-white rounded-xl shadow-medium p-6 mt-6 hover:shadow-strong transition-all duration-300">
+                <summary class="text-lg font-bold text-election-navy cursor-pointer list-none flex items-center gap-2">
+                    <span class="text-gray-500">📅</span> 2026年1月25日時点のデータ（参考）
+                </summary>
+                <div class="mt-4 pt-4 border-t border-gray-200">
+                    <p class="text-sm text-gray-700 mb-4">
+                        以下は2026年1月25日取得時点の世論調査に基づく予測です。上記「最新」はより新しい調査に更新しています。
+                    </p>
+                    <ul class="text-sm text-gray-700 space-y-2">
+                        <li>• 朝日新聞世論調査（2026年1月25日）</li>
+                        <li>• 読売新聞世論調査（2026年1月24日）</li>
+                        <li>• 共同通信世論調査（2026年1月23日）</li>
+                        <li>• 各党の支持率データを統合分析</li>
+                    </ul>
+                    <p class="text-xs text-gray-500 mt-4">
+                        予測議席数は当時と同一（自民196・中道167・維新34・国民26・立民2・公明2・れいわ9・共産8・参政3・保守1・その他17）。
+                    </p>
+                </div>
+            </details>
         </section>
 
         <!-- 政策比較タブ -->
@@ -2411,6 +2315,23 @@
                 </div>
             </div>
         </section>
+            </div>
+            <!-- サイドバー：ネット・ニュースでトレンドのワード -->
+            <aside id="sidebar-trending" class="lg:w-72 flex-shrink-0 order-first lg:order-last">
+                <div class="lg:sticky lg:top-24 bg-white rounded-xl shadow-medium p-5 border border-gray-200">
+                    <h3 class="text-base font-bold text-election-navy mb-3 flex items-center gap-2">
+                        <span aria-hidden="true">📈</span> トレンドワード
+                    </h3>
+                    <p class="text-xs text-gray-500 mb-3">ネット・ニュースで話題のワード（参考）</p>
+                    <ul id="trending-words-list" class="space-y-2 text-sm">
+                        <li class="text-gray-400">読み込み中…</li>
+                    </ul>
+                    <p class="text-xs text-gray-500 mt-4 pt-3 border-t border-gray-200">
+                        <a href="https://trends.google.co.jp/trending?geo=JP" target="_blank" rel="noopener noreferrer" class="text-election-blue hover:underline">Google トレンドで調べる</a>
+                    </p>
+                </div>
+            </aside>
+        </div>
     </main>
 
     <!-- フッター -->
@@ -2460,6 +2381,24 @@
 
     <script src="js/load-data.js"></script>
     <script>
+        // ========== サイドバー：トレンドワード（ネット・ニュースでトレンドのワード） ==========
+        (function() {
+            var listEl = document.getElementById('trending-words-list');
+            if (!listEl) return;
+            fetch('data/trending.json').then(function(r) { return r.ok ? r.json() : null; }).then(function(data) {
+                if (!data || !data.words || !data.words.length) {
+                    listEl.innerHTML = '<li class="text-gray-500">データがありません</li>';
+                    return;
+                }
+                listEl.innerHTML = data.words.map(function(item) {
+                    var url = item.url || ('https://www.google.com/search?q=' + encodeURIComponent(item.word));
+                    return '<li><a href="' + url + '" target="_blank" rel="noopener noreferrer" class="text-election-blue hover:underline">' + (item.word || '') + '</a></li>';
+                }).join('');
+            }).catch(function() {
+                listEl.innerHTML = '<li class="text-gray-500">読み込みに失敗しました</li>';
+            });
+        })();
+
         // ========== カウントダウン機能 ==========
         function updateCountdown() {
             const electionDate = new Date('2026-02-08');

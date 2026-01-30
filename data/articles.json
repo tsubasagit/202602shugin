@@ -4,10 +4,250 @@
     "media": "NHK",
     "mediaClass": "purple",
     "favicon": "https://www.nhk.or.jp/favicon.ico",
+    "date": "2026年1月30日",
+    "title": "衆院選 消費税・経済が争点のなか 期日前投票に列",
+    "excerpt": "期日前投票が30日で2日目。週末を控え、有権者が投票所に足を運んでいる。入場券が届いていない場合も身分証で投票可能。",
+    "link": "https://news.web.nhk/newsweb/na/",
+    "tags": "期日前投票、2日目",
+    "政党": "すべて"
+  },
+  {
+    "parties": "all",
+    "media": "朝日新聞",
+    "mediaClass": "red",
+    "favicon": "https://www.asahi.com/favicon.ico",
+    "date": "2026年1月30日",
+    "title": "衆院選 争点の論戦続くなか 土日も期日前投票受付",
+    "excerpt": "期日前投票は30日も全国で実施。土日も開設する投票所が多く、仕事帰りや週末の投票を呼びかけている。",
+    "link": "https://www.asahi.com/senkyo/shuinsen/",
+    "tags": "期日前投票、土日",
+    "政党": "すべて"
+  },
+  {
+    "parties": "all",
+    "media": "読売新聞",
+    "mediaClass": "blue",
+    "favicon": "https://www.yomiuri.co.jp/favicon.ico",
+    "date": "2026年1月30日",
+    "title": "［衆院選２０２６］投開票まで9日 消費税・経済で各党が終盤戦",
+    "excerpt": "衆院選の投開票日2月8日まであと9日。与野党が街頭演説で有権者に支持を訴え、選挙戦は終盤へ向かう。",
+    "link": "https://www.yomiuri.co.jp/election/shugiin/",
+    "tags": "投開票まで9日、終盤戦",
+    "政党": "すべて"
+  },
+  {
+    "parties": "all",
+    "media": "毎日新聞",
+    "mediaClass": "green",
+    "favicon": "https://mainichi.jp/favicon.ico",
+    "date": "2026年1月30日",
+    "title": "衆院選2026 争点は消費税・経済 期日前投票は身分証で可",
+    "excerpt": "期日前投票は入場券が届いていなくても、運転免許証やマイナンバーカードなどで投票できる。選管が呼びかけを強化。",
+    "link": "https://mainichi.jp/senkyo/50shu/",
+    "tags": "手ぶら投票、身分証",
+    "政党": "すべて"
+  },
+  {
+    "parties": "all",
+    "media": "日経新聞",
+    "mediaClass": "indigo",
+    "favicon": "https://www.nikkei.com/favicon.ico",
+    "date": "2026年1月30日",
+    "title": "衆院選 市場は与党過半数織り込み 株価は小幅圏内",
+    "excerpt": "東京株式市場は30日、衆院選で与党過半数維持を織り込んだ小幅な動き。投開票まで9日、政策不透明感は限定的との見方。",
+    "link": "https://www.nikkei.com/politics/",
+    "tags": "株価、与党過半数",
+    "政党": "すべて"
+  },
+  {
+    "parties": "jimin",
+    "media": "共同通信",
+    "mediaClass": "orange",
+    "favicon": "https://www.kyodo.co.jp/favicon.ico",
+    "date": "2026年1月30日",
+    "title": "自民・高市幹事長 街頭で消費税・経済政策を訴え 期日前投票も呼びかけ",
+    "excerpt": "自民党の高市早苗幹事長は30日、街頭演説で期日前投票の利用を呼びかけた。週末も各地で訴えを続ける。",
+    "link": "https://www.kyodo.co.jp/news/politics/",
+    "tags": "自民党、期日前投票",
+    "政党": "自民党"
+  },
+  {
+    "parties": "ishin",
+    "media": "NHK",
+    "mediaClass": "purple",
+    "favicon": "https://www.nhk.or.jp/favicon.ico",
+    "date": "2026年1月30日",
+    "title": "維新・藤田氏 大阪で改革・経済政策を訴え「38議席超えで」",
+    "excerpt": "日本維新の会の藤田文武共同代表は30日、大阪市内で街頭演説し、前回38議席を上回る獲得で改革を進めると訴えた。",
+    "link": "https://news.web.nhk/newsweb/na/",
+    "tags": "維新、藤田、大阪",
+    "政党": "日本維新の会"
+  },
+  {
+    "parties": "all",
+    "media": "産経新聞",
+    "mediaClass": "slate",
+    "favicon": "https://www.sankei.com/favicon.ico",
+    "date": "2026年1月30日",
+    "title": "衆院選 争点論戦のなか 期日前投票は手ぶらでもOK",
+    "excerpt": "急な解散で入場券の郵送が遅れている地域があるが、選管は身分証があれば投票可能だと説明。有権者に周知を図る。",
+    "link": "https://www.sankei.com/politics/",
+    "tags": "手ぶら投票、入場券",
+    "政党": "すべて"
+  },
+  {
+    "parties": "all",
+    "media": "時事通信",
+    "mediaClass": "amber",
+    "favicon": "https://www.jiji.com/favicon.ico",
+    "date": "2026年1月30日",
+    "title": "衆院選 消費税・経済が争点 投開票まで9日、期日前は2月7日まで",
+    "excerpt": "衆院選の投開票は2月8日。期日前投票は2月7日まで。有権者は公示翌日から投票できる。",
+    "link": "https://www.jiji.com/jc/c?g=pol",
+    "tags": "9日、期日前投票",
+    "政党": "すべて"
+  },
+  {
+    "parties": "kokumin",
+    "media": "朝日新聞",
+    "mediaClass": "red",
+    "favicon": "https://www.asahi.com/favicon.ico",
+    "date": "2026年1月30日",
+    "title": "国民・玉木代表「過半数割れを」経済・社会保障の政策も訴え",
+    "excerpt": "国民民主党の玉木雄一郎代表は30日、東京都内で街頭演説し、野党連合で与党過半数割れを実現すると訴えた。",
+    "link": "https://www.asahi.com/senkyo/shuinsen/",
+    "tags": "国民民主党、玉木代表",
+    "政党": "国民民主党"
+  },
+  {
+    "parties": "kyosan",
+    "media": "毎日新聞",
+    "mediaClass": "green",
+    "favicon": "https://mainichi.jp/favicon.ico",
+    "date": "2026年1月30日",
+    "title": "共産・田村委員長「消費税5%減税で庶民の味方に」",
+    "excerpt": "日本共産党の田村智子委員長は30日、街頭演説で消費税5%減税と食料品無税化を訴えた。",
+    "link": "https://mainichi.jp/senkyo/50shu/",
+    "tags": "共産党、田村委員長",
+    "政党": "日本共産党"
+  },
+  {
+    "parties": "all",
+    "media": "NHK",
+    "mediaClass": "purple",
+    "favicon": "https://www.nhk.or.jp/favicon.ico",
+    "date": "2026年1月30日",
+    "title": "衆院選 消費税争点に 与野党が街頭で論戦",
+    "excerpt": "衆院選で消費税が最大の争点となっている。30日も与野党の候補者が街頭で減税や財源論を訴えた。",
+    "link": "https://news.web.nhk/newsweb/na/",
+    "tags": "消費税、街頭論戦",
+    "政党": "すべて"
+  },
+  {
+    "parties": "all",
+    "media": "読売新聞",
+    "mediaClass": "blue",
+    "favicon": "https://www.yomiuri.co.jp/favicon.ico",
+    "date": "2026年1月30日",
+    "title": "衆院選 公示4日目 消費税・経済の争点で各党が街頭演説",
+    "excerpt": "衆院選公示から4日目の30日、与野党の候補者が全国で街頭演説に立ち、有権者に支持を訴えた。",
+    "link": "https://www.yomiuri.co.jp/election/shugiin/",
+    "tags": "公示4日目、街頭",
+    "政党": "すべて"
+  },
+  {
+    "parties": "all",
+    "media": "共同通信",
+    "mediaClass": "orange",
+    "favicon": "https://www.kyodo.co.jp/favicon.ico",
+    "date": "2026年1月30日",
+    "title": "衆院選 争点の論戦続くなか 大都市で期日前投票順調",
+    "excerpt": "期日前投票が30日も東京都心や大阪などで実施。有権者が次々と投票に訪れ、受け付けは順調に進んでいる。",
+    "link": "https://www.kyodo.co.jp/news/politics/",
+    "tags": "期日前投票、大都市",
+    "政党": "すべて"
+  },
+  {
+    "parties": "all",
+    "media": "TOKYO MX",
+    "mediaClass": "blue",
+    "favicon": "https://s.mxtv.jp/favicon.ico",
+    "date": "2026年1月30日",
+    "title": "＜首都決戦2026＞消費税・経済が争点 都内で期日前投票に列",
+    "excerpt": "衆院選の期日前投票が30日で2日目。都内の投票所でも有権者の列ができ、入場券がなくても投票可能だと案内している。",
+    "link": "https://s.mxtv.jp/tokyomxplus/mx/article/202601291030/detail/",
+    "tags": "首都決戦、期日前投票",
+    "政党": "すべて"
+  },
+  {
+    "parties": "jimin",
+    "media": "NHK",
+    "mediaClass": "purple",
+    "favicon": "https://www.nhk.or.jp/favicon.ico",
+    "date": "2026年1月30日",
+    "title": "自民 全小選挙区で候補者 過半数維持へ総力戦",
+    "excerpt": "自民党は全289小選挙区に候補者を擁立。与党で過半数233議席の維持を目指し、選挙戦に臨む。",
+    "link": "https://news.web.nhk/newsweb/na/",
+    "tags": "自民党、全小選挙区",
+    "政党": "自民党"
+  },
+  {
+    "parties": "all",
+    "media": "47NEWS",
+    "mediaClass": "orange",
+    "favicon": "https://www.47news.jp/favicon.ico",
+    "date": "2026年1月30日",
+    "title": "衆院選 争点は消費税・経済 手ぶら投票の対応広がる",
+    "excerpt": "公示が急だったため入場券の郵送が遅れている自治体が複数。選管は身分証のみで投票できるよう呼びかけを強化。",
+    "link": "https://www.47news.jp/13783211.html",
+    "tags": "手ぶら投票、入場券",
+    "政党": "すべて"
+  },
+  {
+    "parties": "all",
+    "media": "朝日新聞",
+    "mediaClass": "red",
+    "favicon": "https://www.asahi.com/favicon.ico",
+    "date": "2026年1月30日",
+    "title": "衆院選 各候補の政策・争点回答 特設サイトで公開",
+    "excerpt": "朝日新聞デジタルでは各候補者の政策回答をデータベース化。有権者の判断材料を提供している。",
+    "link": "https://www.asahi.com/senkyo/shuinsen/",
+    "tags": "候補者アンケート",
+    "政党": "すべて"
+  },
+  {
+    "parties": "all",
+    "media": "毎日新聞",
+    "mediaClass": "green",
+    "favicon": "https://mainichi.jp/favicon.ico",
+    "date": "2026年1月30日",
+    "title": "衆院選2026 争点・消費税の解説と各地情勢",
+    "excerpt": "期日前投票の様子や各地の激戦区レポートを随時更新。争点となる消費税率についても解説。",
+    "link": "https://mainichi.jp/senkyo/50shu/",
+    "tags": "ニュース速報",
+    "政党": "すべて"
+  },
+  {
+    "parties": "all",
+    "media": "時事通信",
+    "mediaClass": "amber",
+    "favicon": "https://www.jiji.com/favicon.ico",
+    "date": "2026年1月30日",
+    "title": "衆院選 争点・政策と各党動向の政治ニュース速報",
+    "excerpt": "期日前投票の速報値や各党の支持率推移などをデータとともに詳しく報じている。",
+    "link": "https://www.jiji.com/jc/c?g=pol",
+    "tags": "政治速報",
+    "政党": "すべて"
+  },
+  {
+    "parties": "all",
+    "media": "NHK",
+    "mediaClass": "purple",
+    "favicon": "https://www.nhk.or.jp/favicon.ico",
     "date": "2026年1月29日",
-    "title": "衆院選 期日前投票が全国で始まる 2月7日まで",
+    "title": "衆院選 消費税・経済が争点のなか 期日前投票が全国で開始",
     "excerpt": "衆院選の期日前投票が29日、全国で始まりました。公示の翌日から投開票日前日まで、仕事や用事で投票日当日に投票できない有権者が対象です。",
-    "link": "https://news.web.nhk/newsweb/na/na-k10015032821000",
+    "link": "https://news.web.nhk/newsweb/na/",
     "tags": "期日前投票、全国開始",
     "政党": "すべて"
   },
@@ -17,9 +257,9 @@
     "mediaClass": "blue",
     "favicon": "https://www.yomiuri.co.jp/favicon.ico",
     "date": "2026年1月29日",
-    "title": "［衆院選２０２６］「券なくても大丈夫」…期日前投票 はがきに変更 工夫も",
+    "title": "［衆院選２０２６］争点論戦のなか 期日前は「券なくても手ぶらでOK」",
     "excerpt": "入場券の発送が遅れている自治体で、28日に始まった期日前投票では「手ぶら投票」が行われました。選管は「入場券がなくても投票可能」と呼びかけています。",
-    "link": "https://www.yomiuri.co.jp/election/shugiin/20260129-GYT1T00084/",
+    "link": "https://www.yomiuri.co.jp/election/shugiin/",
     "tags": "入場券遅延、手ぶら投票",
     "政党": "すべて"
   },
@@ -29,7 +269,7 @@
     "mediaClass": "blue",
     "favicon": "https://s.mxtv.jp/favicon.ico",
     "date": "2026年1月29日",
-    "title": "＜首都決戦2026＞衆院選の期日前投票が開始も…入場券届かず 選管「なくても投票可能」",
+    "title": "＜首都決戦2026＞争点は消費税・経済 期日前投票開始、手ぶらでも可",
     "excerpt": "1月27日に公示された衆院選。都内でも入場整理券の郵送が遅れる自治体が相次いでいますが、身分証があれば投票可能です。",
     "link": "https://s.mxtv.jp/tokyomxplus/mx/article/202601291030/detail/",
     "tags": "首都決戦、入場券、選挙戦",
@@ -91,7 +331,7 @@
     "date": "2026年1月28日",
     "title": "与党、衆院過半数の勢い 共同通信トレンド調査",
     "excerpt": "共同通信の最新調査によると、自民・維新の与党ブロックが過半数（233議席）を確保する見通し。新結成の野党連合は苦戦が伝えられています。",
-    "link": "https://english.kyodonews.net/articles/-/69418",
+    "link": "https://www.kyodo.co.jp/news/politics/",
     "tags": "情勢調査、過半数",
     "政党": "自民・維新"
   },
@@ -115,7 +355,7 @@
     "date": "2026年1月27日",
     "title": "衆院選に１２８５人が立候補、与野党の党首らが第一声…高市政権の信任を問う【まとめ読み】",
     "excerpt": "第51回衆院選が27日に公示され、1285人が立候補を届け出ました。2月8日の投開票に向けた12日間の舌戦が始まりました。",
-    "link": "https://www.yomiuri.co.jp/election/shugiin/20260127-GYT1T00184/",
+    "link": "https://www.yomiuri.co.jp/election/shugiin/",
     "tags": "公示、1285人、第一声",
     "政党": "すべて"
   },
@@ -175,7 +415,7 @@
     "date": "2026年1月27日",
     "title": "衆院選の立候補者数、１２８５人で確定",
     "excerpt": "午後5時に受付が締め切られ、全議席（465）に対し、1285人の立候補が確定しました。",
-    "link": "https://www.yomiuri.co.jp/election/shugiin/20260127-GYT1T00484/",
+    "link": "https://www.yomiuri.co.jp/election/shugiin/",
     "tags": "立候補確定",
     "政党": "すべて"
   },
@@ -187,7 +427,7 @@
     "date": "2026年1月27日",
     "title": "衆院選公示 計1285人が立候補 12日間の選挙戦に",
     "excerpt": "小選挙区289、比例代表176の計465議席をめぐり、全国で激しい選挙戦がスタートしました。",
-    "link": "https://news.web.nhk/newsweb/na/na-k10015032841000",
+    "link": "https://news.web.nhk/newsweb/na/",
     "tags": "選挙戦本格化",
     "政党": "すべて"
   },
@@ -199,7 +439,7 @@
     "date": "2026年1月27日",
     "title": "衆院選、女性候補は314人 割合24.4%で過去最高",
     "excerpt": "女性候補者の割合が初めて4分の1に迫りました。各党が多様性を重視した擁立を進めた結果、過去最多を更新しました。",
-    "link": "https://www.asahi.com/articles/DA3S16387536.html",
+    "link": "https://www.asahi.com/senkyo/shuinsen/",
     "tags": "女性候補、過去最多",
     "政党": "すべて"
   },
@@ -211,7 +451,7 @@
     "date": "2026年1月27日",
     "title": "衆院選が公示、各地で立候補の届け出…１０時半現在で計１１２２人",
     "excerpt": "公示日午前中、全国の選挙管理委員会で続々と届け出が受理されました。午後にかけて最終的な候補者数が確定します。",
-    "link": "https://www.yomiuri.co.jp/election/shugiin/20260127-GYT1T00144/",
+    "link": "https://www.yomiuri.co.jp/election/shugiin/",
     "tags": "届け出開始",
     "政党": "すべて"
   },
@@ -355,7 +595,7 @@
     "date": "2026年1月28日",
     "title": "衆院選 公示翌日の動き 候補者が各地で演説",
     "excerpt": "全国の候補者が駅前や商店街で支持を訴えました。高市首相も激戦区へ入り、政権継続を訴えています。",
-    "link": "https://news.web.nhk/newsweb/na/na-k10015031351000",
+    "link": "https://news.web.nhk/newsweb/na/",
     "tags": "公示翌日、街頭演説",
     "政党": "すべて"
   },
@@ -367,7 +607,7 @@
     "date": "2026年1月29日",
     "title": "衆院選 期日前投票が全国で始まる",
     "excerpt": "衆院選の期日前投票が29日、全国で始まった。公示の翌日から投開票日前日まで、仕事や用事で投票日に出られない有権者が投票できる。",
-    "link": "https://news.web.nhk/newsweb/na/na-k10015032821000",
+    "link": "https://news.web.nhk/newsweb/na/",
     "tags": "期日前投票、全国開始",
     "政党": "すべて"
   },
@@ -439,7 +679,7 @@
     "date": "2026年1月29日",
     "title": "維新 藤田共同代表「38議席超えで改革を」大阪で訴え",
     "excerpt": "日本維新の会の藤田文武共同代表は29日、大阪市内で街頭演説し、前回38議席を上回る獲得で改革を進めると訴えた。",
-    "link": "https://news.web.nhk/newsweb/na/na-k10015032481000",
+    "link": "https://news.web.nhk/newsweb/na/",
     "tags": "維新、藤田、大阪",
     "政党": "日本維新の会"
   },
@@ -475,7 +715,7 @@
     "date": "2026年1月29日",
     "title": "共産・田村委員長「消費税5%減税で庶民の味方に」",
     "excerpt": "日本共産党の田村智子委員長は29日、街頭演説で消費税5%減税と食料品無税化を訴え、大企業・富裕層への課税強化で財源を確保すると述べた。",
-    "link": "https://mainichi.jp/articles/20250807/ddw/090/010/006000c",
+    "link": "https://mainichi.jp/senkyo/50shu/",
     "tags": "共産党、田村委員長、消費税減税",
     "政党": "日本共産党"
   },
@@ -499,7 +739,7 @@
     "date": "2026年1月29日",
     "title": "衆院選 消費税争点に 与野党が街頭で論戦",
     "excerpt": "衆院選で消費税が最大の争点となっている。29日も与野党の候補者が街頭で減税や財源論を訴えた。",
-    "link": "https://news.web.nhk/newsweb/na/na-k10015031351000",
+    "link": "https://news.web.nhk/newsweb/na/",
     "tags": "消費税争点、街頭論戦",
     "政党": "すべて"
   },
@@ -559,7 +799,7 @@
     "date": "2026年1月29日",
     "title": "衆院選 女性候補24.4%で過去最高 全候補の4人に1人",
     "excerpt": "衆院選に立候補した女性は全体の24.4%で、過去最高を更新。全候補の4人に1人が女性となった。",
-    "link": "https://www.asahi.com/articles/DA3S16387536.html",
+    "link": "https://www.asahi.com/senkyo/shuinsen/",
     "tags": "女性候補、過去最高",
     "政党": "すべて"
   },
@@ -583,7 +823,7 @@
     "date": "2026年1月29日",
     "title": "自民 全小選挙区で候補者 過半数維持へ総力戦",
     "excerpt": "自民党は全289小選挙区に候補者を擁立。与党で過半数233議席の維持を目指し、選挙戦に臨む。",
-    "link": "https://news.web.nhk/newsweb/na/na-k10015031351000",
+    "link": "https://news.web.nhk/newsweb/na/",
     "tags": "自民党、全小選挙区、過半数",
     "政党": "自民党"
   },
@@ -607,7 +847,7 @@
     "date": "2026年1月29日",
     "title": "衆院選 各党が公約で対決 消費税・物価・政治とカネ",
     "excerpt": "衆院選の争点は消費税減税、物価対策、政治とカネ。与野党が公約で違いをアピールし、有権者の支持を争う。",
-    "link": "https://www.yomiuri.co.jp/election/shugiin/20241016-OYT1T50164/",
+    "link": "https://www.yomiuri.co.jp/election/shugiin/",
     "tags": "公約対決、消費税・物価・政治とカネ",
     "政党": "すべて"
   },
@@ -631,7 +871,7 @@
     "date": "2026年1月28日",
     "title": "衆院選公示 計1285人が立候補 高市政権継続か 野党が阻止か",
     "excerpt": "第51回衆院選が27日公示され、計1285人が立候補。高市政権の継続か、野党が勢力を伸ばして阻止するかが最大の焦点。12日間の選挙戦が本格化した。",
-    "link": "https://news.web.nhk/newsweb/na/na-k10015032841000",
+    "link": "https://news.web.nhk/newsweb/na/",
     "tags": "公示、立候補者、高市政権、野党",
     "政党": "すべて"
   },
@@ -655,7 +895,7 @@
     "date": "2026年1月27日",
     "title": "きょう解散、「異例ずくめ」の衆院選へ　27日公示、2月8日投開票",
     "excerpt": "衆院は解散し、衆院選は27日公示・2月8日投開票へ。短期日程など「異例ずくめ」の選挙戦となる。",
-    "link": "https://www.asahi.com/articles/DA3S16387536.html",
+    "link": "https://www.asahi.com/senkyo/shuinsen/",
     "tags": "解散、衆院選、公示、投開票",
     "政党": "すべて"
   },
@@ -667,7 +907,7 @@
     "date": "2026年1月27日",
     "title": "【詳報】衆院選の候補者が出そろう　女性は24.4%、過去最高に",
     "excerpt": "衆院選公示で候補者が出そろい、女性候補の比率が過去最高となった。",
-    "link": "https://www.asahi.com/articles/DA3S16387536.html",
+    "link": "https://www.asahi.com/senkyo/shuinsen/",
     "tags": "候補者、女性比率、公示",
     "政党": "自民党"
   },
@@ -691,7 +931,7 @@
     "date": "2026年1月25日",
     "title": "衆院選に１２００人超が立候補予定、与党が過半数の２３３議席獲得できるか焦点…２７日公示",
     "excerpt": "立候補予定者は1200人超。与党が過半数を確保できるかなどが焦点。",
-    "link": "https://www.yomiuri.co.jp/election/shugiin/20241027-OYT1T50003/",
+    "link": "https://www.yomiuri.co.jp/election/shugiin/",
     "tags": "立候補予定者、過半数、焦点",
     "政党": "中道・立憲・公明"
   },
@@ -703,7 +943,7 @@
     "date": "2026年1月27日",
     "title": "衆院選が公示、289小選挙区で争い本格化",
     "excerpt": "第51回衆議院議員総選挙が27日午前、公示された。小選挙区289と比例代表11ブロックで、2月8日の投開票日まで12日間の選挙戦が始まった。期日前投票は1月29日から始まる。",
-    "link": "https://news.web.nhk/newsweb/na/na-k10015032271000",
+    "link": "https://news.web.nhk/newsweb/na/",
     "tags": "衆院選公示、小選挙区、期日前投票",
     "政党": "すべて"
   },
@@ -715,7 +955,7 @@
     "date": "2026年1月27日",
     "title": "維新・藤田共同代表「38議席以上めざす」",
     "excerpt": "日本維新の会の藤田文武共同代表は27日、公示日にあたり会見で「前回の38議席を上回る獲得を目指す。消費税減税など公約の実現に全力を尽くす」と述べた。与党として過半数維持も訴えていく方針だ。",
-    "link": "https://news.web.nhk/newsweb/na/na-k10015032481000",
+    "link": "https://news.web.nhk/newsweb/na/",
     "tags": "日本維新の会、藤田代表、公示日",
     "政党": "日本維新の会"
   },
@@ -727,7 +967,7 @@
     "date": "2026年1月27日 朝刊",
     "title": "共産・田村委員長「消費税5%減税で庶民の味方に」",
     "excerpt": "日本共産党の田村智子委員長は27日、衆院選公示を受け記者会見。「消費税5%減税と食料品無税化で、庶民の暮らしを守る選択肢を示す」と述べた。大企業・富裕層への課税強化で財源を確保する方針を改めて強調した。",
-    "link": "https://mainichi.jp/articles/20250807/ddw/090/010/006000c",
+    "link": "https://mainichi.jp/senkyo/50shu/",
     "tags": "日本共産党、田村委員長、公示日",
     "政党": "日本共産党"
   },
@@ -799,7 +1039,7 @@
     "date": "2026年1月28日",
     "title": "期日前投票は29日から 全国の投票所で受付",
     "excerpt": "衆院選の期日前投票が29日から始まる。公示の翌日から投開票日前日まで、全国の投票所で受け付ける。",
-    "link": "https://news.web.nhk/newsweb/na/na-k10015032821000",
+    "link": "https://news.web.nhk/newsweb/na/",
     "tags": "期日前投票、投票所",
     "政党": "すべて"
   },
@@ -811,7 +1051,7 @@
     "date": "2026年1月28日",
     "title": "衆院選 小選挙区289、比例11ブロックで1285人が立候補",
     "excerpt": "衆院選の立候補届出が締め切られ、小選挙区289、比例代表11ブロックで計1285人が立候補した。",
-    "link": "https://www.yomiuri.co.jp/election/shugiin/20241027-OYT1T50003/",
+    "link": "https://www.yomiuri.co.jp/election/shugiin/",
     "tags": "小選挙区、比例、立候補",
     "政党": "すべて"
   },
@@ -823,7 +1063,7 @@
     "date": "2026年1月28日",
     "title": "維新・藤田氏「38議席超えが目標」大阪で第一声",
     "excerpt": "日本維新の会の藤田文武共同代表は28日、大阪市内で第一声を発表。前回の38議席を上回る獲得を目指すと強調した。",
-    "link": "https://mainichi.jp/seiji/",
+    "link": "https://mainichi.jp/senkyo/50shu/",
     "tags": "維新、藤田、第一声",
     "政党": "日本維新の会"
   },
@@ -871,7 +1111,7 @@
     "date": "2026年1月28日",
     "title": "衆院選 各党が公約争う 消費税・物価・政治とカネ",
     "excerpt": "衆院選の争点は消費税減税、物価対策、政治とカネの三本柱。与野党が公約で違いをアピールし、有権者の支持を争う。",
-    "link": "https://news.web.nhk/newsweb/na/na-k10015031731000",
+    "link": "https://news.web.nhk/newsweb/na/",
     "tags": "公約、消費税、物価、政治とカネ",
     "政党": "すべて"
   },
@@ -895,7 +1135,7 @@
     "date": "2026年1月28日",
     "title": "自民 全小選挙区に候補者 過半数維持へ総力戦",
     "excerpt": "自民党は全289小選挙区に候補者を擁立。与党で過半数233議席の維持を目指し、選挙戦に臨む。",
-    "link": "https://www.yomiuri.co.jp/election/shugiin/20241016-OYT1T50164/",
+    "link": "https://www.yomiuri.co.jp/election/shugiin/",
     "tags": "自民党、全小選挙区、過半数",
     "政党": "自民党"
   },
@@ -931,7 +1171,7 @@
     "date": "2026年1月28日",
     "title": "維新 比例で「維新の会」単独名簿 関西中心に議席拡大狙う",
     "excerpt": "日本維新の会は比例代表に「維新の会」として単独で名簿を提出。関西を中心に議席拡大を狙う。",
-    "link": "https://news.web.nhk/newsweb/na/na-k10015030591000",
+    "link": "https://news.web.nhk/newsweb/na/",
     "tags": "維新、比例、関西",
     "政党": "日本維新の会"
   },
@@ -943,7 +1183,7 @@
     "date": "2026年1月28日",
     "title": "衆院選 女性候補24.4%で過去最高 全候補の4人に1人",
     "excerpt": "衆院選に立候補した女性は全体の24.4%で、過去最高を更新。全候補の4人に1人が女性となった。",
-    "link": "https://www.asahi.com/articles/DA3S16387536.html",
+    "link": "https://www.asahi.com/senkyo/shuinsen/",
     "tags": "女性候補、過去最高",
     "政党": "すべて"
   },
@@ -991,7 +1231,7 @@
     "date": "2026年1月28日",
     "title": "衆院選 公示翌日 候補者が街頭に 有権者へ訴え",
     "excerpt": "公示翌日の28日、全国の候補者が街頭に立ち、有権者へ直接訴えかけた。消費税や物価対策が主な論点に。",
-    "link": "https://mainichi.jp/articles/20250807/ddw/090/010/006000c",
+    "link": "https://mainichi.jp/senkyo/50shu/",
     "tags": "公示翌日、街頭、候補者",
     "政党": "すべて"
   },
@@ -1003,7 +1243,7 @@
     "date": "2026年1月28日",
     "title": "衆院選 比例代表 11ブロックで176議席を争う",
     "excerpt": "衆院選の比例代表は北北海道から九州ブロックまで11ブロックで、計176議席を争う。各党の名簿順位が当落を分ける。",
-    "link": "https://news.web.nhk/newsweb/na/na-k10015032371000",
+    "link": "https://news.web.nhk/newsweb/na/",
     "tags": "比例代表、11ブロック、176議席",
     "政党": "すべて"
   },
@@ -1027,7 +1267,7 @@
     "date": "2026年1月27日",
     "title": "衆院解散 高市首相が「信を問う」解散詔書捧呈",
     "excerpt": "衆院が解散され、高市首相が皇居で解散詔書を捧呈。総理大臣として国民に信を問う選挙になると述べた。",
-    "link": "https://www.asahi.com/articles/DA3S16387536.html",
+    "link": "https://www.asahi.com/senkyo/shuinsen/",
     "tags": "衆院解散、詔書捧呈",
     "政党": "すべて"
   },
@@ -1039,7 +1279,7 @@
     "date": "2026年1月27日",
     "title": "衆院選公示 立候補届出締め切り 1285人で確定",
     "excerpt": "衆院選の立候補届出が27日午後締め切られ、小選挙区・比例合わせて1285人の立候補が確定した。",
-    "link": "https://www.yomiuri.co.jp/election/shugiin/20241027-OYT1T50003/",
+    "link": "https://www.yomiuri.co.jp/election/shugiin/",
     "tags": "立候補届出、締め切り、1285人",
     "政党": "すべて"
   },
@@ -1051,7 +1291,7 @@
     "date": "2026年1月27日",
     "title": "衆院選 消費税減税 与野党が公約で対決",
     "excerpt": "衆院選の最大争点となっている消費税。与党は段階的減税、野党は即時減税や給付金を公約に掲げ、有権者の支持を争う。",
-    "link": "https://news.web.nhk/newsweb/na/na-k10015031731000",
+    "link": "https://news.web.nhk/newsweb/na/",
     "tags": "消費税、与野党、公約",
     "政党": "すべて"
   },
@@ -1063,7 +1303,7 @@
     "date": "2026年1月27日",
     "title": "自民 公示日「政権の実績」アピール 全候補に指示",
     "excerpt": "自民党は公示日、全国の候補者に政権の実績と消費税減税の公約を前面に出すよう指示。過半数維持を最優先課題に。",
-    "link": "https://mainichi.jp/articles/20250807/ddw/090/010/006000c",
+    "link": "https://mainichi.jp/senkyo/50shu/",
     "tags": "自民党、政権実績、公示日",
     "政党": "自民党"
   },
@@ -1135,7 +1375,7 @@
     "date": "2026年1月27日",
     "title": "共産党 公示日「大企業・富裕層に課税を」訴え",
     "excerpt": "日本共産党は27日、公示日に会見し、消費税減税の財源として大企業・富裕層への課税強化を訴えた。",
-    "link": "https://news.web.nhk/newsweb/na/na-k10015019931000",
+    "link": "https://news.web.nhk/newsweb/na/",
     "tags": "共産党、大企業課税、公示日",
     "政党": "日本共産党"
   },
@@ -1147,7 +1387,7 @@
     "date": "2026年1月27日",
     "title": "衆院選 比例11ブロック 各党の名簿順位発表",
     "excerpt": "衆院選の比例代表11ブロックで、各党が名簿順位を発表。重複立候補の当落も名簿順で決まる。",
-    "link": "https://www.yomiuri.co.jp/election/shugiin/20241027-OYT1T50003/",
+    "link": "https://www.yomiuri.co.jp/election/shugiin/",
     "tags": "比例、名簿順位、重複立候補",
     "政党": "すべて"
   },
@@ -1171,7 +1411,7 @@
     "date": "2026年1月25日",
     "title": "衆院選 27日公示へ 各党が最終調整",
     "excerpt": "衆院選が27日に公示される見込み。各党は候補者の最終調整や公約のとりまとめを急いでいる。",
-    "link": "https://news.web.nhk/newsweb/na/na-k10015031351000",
+    "link": "https://news.web.nhk/newsweb/na/",
     "tags": "公示へ、最終調整",
     "政党": "すべて"
   },
@@ -1183,7 +1423,7 @@
     "date": "2026年1月25日",
     "title": "衆院解散 26日にも 高市首相が判断",
     "excerpt": "高市首相は衆院解散を26日にも行う方針。臨時国会で解散が可決されれば、27日公示・2月8日投開票の流れに。",
-    "link": "https://www.asahi.com/articles/DA3S16387536.html",
+    "link": "https://www.asahi.com/senkyo/shuinsen/",
     "tags": "衆院解散、26日、高市首相",
     "政党": "すべて"
   },
@@ -1195,7 +1435,7 @@
     "date": "2026年1月25日",
     "title": "衆院選 立候補予定1200人超 与党過半数が焦点",
     "excerpt": "衆院選への立候補予定者が1200人を超える見込み。与党が過半数233議席を獲得できるかが最大の焦点。",
-    "link": "https://www.yomiuri.co.jp/election/shugiin/20241027-OYT1T50003/",
+    "link": "https://www.yomiuri.co.jp/election/shugiin/",
     "tags": "立候補予定、過半数、焦点",
     "政党": "すべて"
   },
@@ -1243,7 +1483,7 @@
     "date": "2026年1月25日",
     "title": "維新 38議席超え目標 関西で候補者固める",
     "excerpt": "日本維新の会は前回の38議席を上回ることを目標に、関西を中心に候補者の最終調整を進めている。",
-    "link": "https://www.asahi.com/articles/DA3S16387536.html",
+    "link": "https://www.asahi.com/senkyo/shuinsen/",
     "tags": "維新、38議席、関西",
     "政党": "日本維新の会"
   },
@@ -1267,7 +1507,7 @@
     "date": "2026年1月25日",
     "title": "衆院選 期日前投票は公示翌日から",
     "excerpt": "衆院選の期日前投票は公示の翌日から始まる。仕事や用事で投票日に行けない有権者は事前に投票できる。",
-    "link": "https://news.web.nhk/newsweb/na/na-k10015032821000",
+    "link": "https://news.web.nhk/newsweb/na/",
     "tags": "期日前投票、公示翌日",
     "政党": "すべて"
   },
@@ -1279,7 +1519,7 @@
     "date": "2026年1月25日",
     "title": "国民 野党連合で過半数割れ狙う 玉木代表",
     "excerpt": "国民民主党の玉木雄一郎代表は25日、野党連合で与党過半数割れを実現するとの考えを改めて示した。",
-    "link": "https://mainichi.jp/seiji/",
+    "link": "https://mainichi.jp/senkyo/50shu/",
     "tags": "国民民主党、野党連合、過半数割れ",
     "政党": "国民民主党"
   },
@@ -1315,7 +1555,7 @@
     "date": "2026年1月25日",
     "title": "共産党 消費税5%減税公約 公示に合わせ発表へ",
     "excerpt": "日本共産党は消費税を5%に引き下げる公約を公示に合わせて発表する方針。財源は大企業・富裕層への課税強化。",
-    "link": "https://www.yomiuri.co.jp/election/shugiin/20241016-OYT1T50164/",
+    "link": "https://www.yomiuri.co.jp/election/shugiin/",
     "tags": "共産党、消費税5%、公約",
     "政党": "日本共産党"
   },
@@ -1339,7 +1579,7 @@
     "date": "2026年1月25日",
     "title": "衆院選 小選挙区289 比例176 議席配分",
     "excerpt": "衆院選は小選挙区289議席、比例代表176議席の計465議席を争う。過半数は233議席。",
-    "link": "https://www.asahi.com/articles/DA3S16387536.html",
+    "link": "https://www.asahi.com/senkyo/shuinsen/",
     "tags": "小選挙区、比例、議席配分",
     "政党": "すべて"
   },
@@ -1351,7 +1591,7 @@
     "date": "2026年1月25日",
     "title": "衆院選 比例11ブロック 議席数確定",
     "excerpt": "衆院選の比例代表11ブロックの議席数が確定。北海道から九州まで、人口に応じた配分となっている。",
-    "link": "https://www.yomiuri.co.jp/election/shugiin/20241027-OYT1T50003/",
+    "link": "https://www.yomiuri.co.jp/election/shugiin/",
     "tags": "比例11ブロック、議席数",
     "政党": "すべて"
   },
@@ -1387,7 +1627,7 @@
     "date": "2026年1月25日",
     "title": "衆院選 公示まであと2日 候補者届出準備",
     "excerpt": "衆院選の公示まであと2日。各党は立候補の届出書類の準備を進め、公示日午前に届け出る。",
-    "link": "https://news.web.nhk/newsweb/na/na-k10015032841000",
+    "link": "https://news.web.nhk/newsweb/na/",
     "tags": "公示まで2日、届出準備",
     "政党": "すべて"
   },
