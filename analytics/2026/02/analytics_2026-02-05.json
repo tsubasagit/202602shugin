@@ -1,0 +1,13 @@
+{
+  "date": "2026-02-05",
+  "timestamp": "2026-02-05T00:58:39.426Z",
+  "source": "github-actions",
+  "note": "このデータはGitHub Actionsによって自動生成されました。実際のアナリティクスデータは、サイトのlocalStorageから取得する必要があります。",
+  "data": {
+    "pageviews": 0,
+    "sessions": 0,
+    "tabViews": {},
+    "dailyViews": {},
+    "hourlyViews": {}
+  }
+}
