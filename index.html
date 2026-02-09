@@ -442,10 +442,13 @@
                     <div class="text-gray-600 hidden md:block">
                         <span class="font-semibold">投票日:</span> <span class="font-bold text-election-blue">2026年2月8日</span>
                     </div>
-                    <div class="countdown-container text-white px-5 py-3 rounded-xl cursor-pointer">
-                        <div class="text-xs md:text-sm opacity-90">あと</div>
-                        <div id="countdown" class="countdown-number number-counter">7</div>
-                        <div class="text-xs md:text-sm opacity-90">日</div>
+                    <div class="countdown-container text-white px-5 py-3 rounded-xl cursor-pointer flex flex-col items-center">
+                        <div class="flex items-baseline gap-0.5">
+                            <div class="text-xs md:text-sm opacity-90">あと</div>
+                            <div id="countdown" class="countdown-number number-counter">0</div>
+                            <div class="text-xs md:text-sm opacity-90">日</div>
+                        </div>
+                        <div id="countdown-ended" class="text-xs md:text-sm font-bold mt-1 opacity-95">選挙終了</div>
                     </div>
                 </div>
             </div>
@@ -456,17 +459,26 @@
     <main class="container mx-auto px-4 py-8 max-w-7xl w-full">
         <div class="flex flex-col gap-8 w-full max-w-full">
             <div class="w-full max-w-full min-w-0">
-        <!-- 前日のニュースサマリー -->
-        <section id="previous-day-summary" class="bg-gradient-to-r from-election-navy to-blue-800 text-white rounded-xl shadow-strong p-6 mb-8 info-card">
-            <h2 class="text-lg font-bold mb-1 opacity-90">📋 前日のニュースサマリー</h2>
-            <p id="previous-day-summary-date" class="text-sm font-semibold mb-3 text-blue-100">2026年2月7日</p>
-            <div id="previous-day-summary-body" class="text-sm leading-relaxed text-blue-50">
-                <p class="mb-2">衆院選はあす2月8日が投開票日。本日7日は選挙戦最終日。与野党が全国で街頭演説を展開し、消費税を最大の争点に最後の訴えを行った。自民・高市幹事長は食料品消費税2年間免税を訴え、期日前投票の利用を最終呼びかけ。中道改革連合・野田代表は消費税5%減税と社会保障の充実を、国民・玉木代表は東京で野党連合による過半数割れと経済政策を、維新・藤田氏は大阪で「38議席超えで改革」を、共産・田村委員長は消費税5%減税と食料品無税化を、それぞれ最後に訴えた。期日前投票は本日7日が最終日。身分証のみで投票できる「手ぶら投票」が可能。あす8日は本投票です。</p>
-                <p class="text-xs text-blue-200 mt-2">※ サマリーは前日付の記事をもとにした要約です。詳細は下方のニュース・記事一覧をご覧ください。</p>
+        <!-- 最終選挙結果（一番上に表示・2026年2月8日投開票） -->
+        <section class="bg-gradient-to-r from-election-navy to-blue-900 text-white rounded-xl shadow-strong p-6 mb-8 info-card">
+            <h2 class="text-xl font-bold mb-1 opacity-95">🏛️ 最終選挙結果</h2>
+            <p class="text-sm font-semibold mb-4 text-blue-100">2026年2月8日 投開票</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                <div class="bg-white/10 rounded-xl p-4">
+                    <div class="text-sm opacity-90 mb-1">与党</div>
+                    <div class="text-2xl font-bold">352議席</div>
+                    <div class="text-xs text-blue-100 mt-1">自民316 + 維新36（単独で3分の2超・自民は戦後最多）</div>
+                </div>
+                <div class="bg-white/10 rounded-xl p-4">
+                    <div class="text-sm opacity-90 mb-1">野党・その他</div>
+                    <div class="text-2xl font-bold">113議席</div>
+                    <div class="text-xs text-blue-100 mt-1">中道49 + 国民28 + その他36</div>
+                </div>
             </div>
+            <p class="text-sm text-blue-50">総定数465、過半数233、3分の2は310。自民党が316議席で単独3分の2超を確保し、戦後最多となる圧勝。中道改革連合は議席を半数以下に減らしました。詳細は下方の選挙情報・政党一覧をご覧ください。</p>
         </section>
 
-        <!-- トレンドワード（サマリーの下に表示） -->
+        <!-- トレンドワード -->
         <section class="mb-8" aria-label="トレンドワード">
             <div class="bg-white rounded-xl shadow-medium p-5 border border-gray-200">
                 <h3 class="text-base font-bold text-election-navy mb-3 flex items-center gap-2">
@@ -480,25 +492,6 @@
                     <a href="https://trends.google.co.jp/trending?geo=JP" target="_blank" rel="noopener noreferrer" class="text-election-blue hover:underline">Google トレンドで調べる</a>
                 </p>
             </div>
-        </section>
-
-        <!-- 最終選挙結果（2026年2月8日投開票） -->
-        <section class="bg-gradient-to-r from-election-navy to-blue-900 text-white rounded-xl shadow-strong p-6 mb-8 info-card">
-            <h2 class="text-xl font-bold mb-1 opacity-95">🏛️ 最終選挙結果</h2>
-            <p class="text-sm font-semibold mb-4 text-blue-100">2026年2月8日 投開票</p>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                <div class="bg-white/10 rounded-xl p-4">
-                    <div class="text-sm opacity-90 mb-1">与党</div>
-                    <div class="text-2xl font-bold">230議席</div>
-                    <div class="text-xs text-blue-100 mt-1">自民196 + 維新34（過半数233に届かず）</div>
-                </div>
-                <div class="bg-white/10 rounded-xl p-4">
-                    <div class="text-sm opacity-90 mb-1">野党・その他</div>
-                    <div class="text-2xl font-bold">235議席</div>
-                    <div class="text-xs text-blue-100 mt-1">中道167 + 国民26 + その他42</div>
-                </div>
-            </div>
-            <p class="text-sm text-blue-50">総定数465、過半数233。与党は過半数を維持できず、野党・無所属等が過半数を占める結果となりました。詳細は下方の選挙情報・政党一覧をご覧ください。</p>
         </section>
 
         <!-- 選挙情報カード -->
@@ -524,13 +517,13 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-xl shadow-soft">
                     <div class="text-sm text-gray-600 mb-2 font-medium">与党</div>
-                    <div class="text-3xl font-bold text-blue-700">230議席</div>
-                    <div class="text-xs text-gray-500 mt-2">自民196 + 維新34</div>
+                    <div class="text-3xl font-bold text-blue-700">352議席</div>
+                    <div class="text-xs text-gray-500 mt-2">自民316 + 維新36</div>
                 </div>
                 <div class="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-xl shadow-soft">
                     <div class="text-sm text-gray-600 mb-2 font-medium">野党・その他</div>
-                    <div class="text-3xl font-bold text-green-700">235議席</div>
-                    <div class="text-xs text-gray-500 mt-2">中道167 + 国民26 + その他42</div>
+                    <div class="text-3xl font-bold text-green-700">113議席</div>
+                    <div class="text-xs text-gray-500 mt-2">中道49 + 国民28 + その他36</div>
                 </div>
             </div>
             <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -991,16 +984,16 @@
                         <span class="font-semibold">代表:</span> 高市早苗（総理大臣）
                     </div>
                     <div class="text-sm text-gray-600 mb-2">
-                        <span class="font-semibold">選挙区:</span> <span class="font-bold text-blue-600">137議席</span>
+                        <span class="font-semibold">選挙区:</span> <span class="font-bold text-blue-600">220議席</span>
                     </div>
                     <div class="text-sm text-gray-600 mb-2">
-                        <span class="font-semibold">比例代表:</span> <span class="font-bold text-blue-600">59議席</span>
+                        <span class="font-semibold">比例代表:</span> <span class="font-bold text-blue-600">96議席</span>
                     </div>
                     <div class="text-sm text-gray-600 mb-4">
-                        <span class="font-semibold">合計:</span> <span class="text-lg font-bold text-blue-600">196議席</span>
+                        <span class="font-semibold">合計:</span> <span class="text-lg font-bold text-blue-600">316議席</span>
                     </div>
                     <p class="text-sm text-gray-700 leading-relaxed">
-                        高市早苗総理大臣による解散総選挙。2024年9月に総裁に就任。食料品消費税2年間免税を主要公約に掲げる。2024年衆院選では過半数を割り込んだが、公明党と連立を維持。
+                        高市早苗総理大臣による解散総選挙。2024年9月に総裁に就任。食料品消費税2年間免税を主要公約に掲げる。2026年衆院選で316議席を獲得し、単独で3分の2超（310超）を確保。戦後最多の議席数となる圧勝を収めた。
                     </p>
                 </div>
 
@@ -1014,16 +1007,16 @@
                         <span class="font-semibold">構成:</span> 立憲民主党・公明党など
                     </div>
                     <div class="text-sm text-gray-600 mb-2">
-                        <span class="font-semibold">選挙区:</span> <span class="font-bold text-green-600">105議席</span>
+                        <span class="font-semibold">選挙区:</span> <span class="font-bold text-green-600">30議席</span>
                     </div>
                     <div class="text-sm text-gray-600 mb-2">
-                        <span class="font-semibold">比例代表:</span> <span class="font-bold text-green-600">62議席</span>
+                        <span class="font-semibold">比例代表:</span> <span class="font-bold text-green-600">19議席</span>
                     </div>
                     <div class="text-sm text-gray-600 mb-4">
-                        <span class="font-semibold">合計:</span> <span class="text-lg font-bold text-green-600">167議席</span>
+                        <span class="font-semibold">合計:</span> <span class="text-lg font-bold text-green-600">49議席</span>
                     </div>
                     <p class="text-sm text-gray-700 leading-relaxed">
-                        2026年1月に結成された新たな野党連合。立憲民主党と公明党などが合流。高市政権への対抗軸として政策を提示。2026年衆院選で167議席を獲得し、最大野党となった。
+                        2026年1月に結成された新たな野党連合。立憲民主党と公明党などが合流。高市政権への対抗軸として政策を提示。2026年衆院選では公示前167議席から49議席に減少し、半数以下となった。
                     </p>
                 </div>
 
@@ -1063,13 +1056,13 @@
                         <span class="font-semibold">選挙区:</span> <span class="font-bold text-orange-600">22議席</span>
                     </div>
                     <div class="text-sm text-gray-600 mb-2">
-                        <span class="font-semibold">比例代表:</span> <span class="font-bold text-orange-600">12議席</span>
+                        <span class="font-semibold">比例代表:</span> <span class="font-bold text-orange-600">14議席</span>
                     </div>
                     <div class="text-sm text-gray-600 mb-4">
-                        <span class="font-semibold">合計:</span> <span class="text-lg font-bold text-orange-600">34議席</span>
+                        <span class="font-semibold">合計:</span> <span class="text-lg font-bold text-orange-600">36議席</span>
                     </div>
                     <p class="text-sm text-gray-700 leading-relaxed">
-                        2024年11月に馬場伸幸前代表が辞任後、新体制に。地方分権と規制改革を推進。大阪を中心に支持基盤を持つ。独自の経済政策を展開。2026年衆院選で34議席を獲得し、与党に参加。
+                        2024年11月に馬場伸幸前代表が辞任後、新体制に。地方分権と規制改革を推進。大阪を中心に支持基盤を持つ。独自の経済政策を展開。2026年衆院選で36議席を獲得し、与党に参加。
                     </p>
                 </div>
 
@@ -1083,16 +1076,16 @@
                         <span class="font-semibold">代表:</span> 玉木雄一郎
                     </div>
                     <div class="text-sm text-gray-600 mb-2">
-                        <span class="font-semibold">選挙区:</span> <span class="font-bold text-purple-600">11議席</span>
+                        <span class="font-semibold">選挙区:</span> <span class="font-bold text-purple-600">12議席</span>
                     </div>
                     <div class="text-sm text-gray-600 mb-2">
-                        <span class="font-semibold">比例代表:</span> <span class="font-bold text-purple-600">15議席</span>
+                        <span class="font-semibold">比例代表:</span> <span class="font-bold text-purple-600">16議席</span>
                     </div>
                     <div class="text-sm text-gray-600 mb-4">
-                        <span class="font-semibold">合計:</span> <span class="text-lg font-bold text-purple-600">26議席</span>
+                        <span class="font-semibold">合計:</span> <span class="text-lg font-bold text-purple-600">28議席</span>
                     </div>
                     <p class="text-sm text-gray-700 leading-relaxed">
-                        玉木雄一郎代表が率いる中道リベラル政党。2026年衆院選で26議席を獲得。社会保障と経済成長の両立を目指す。
+                        玉木雄一郎代表が率いる中道リベラル政党。2026年衆院選で28議席を獲得。社会保障と経済成長の両立を目指す。
                     </p>
                 </div>
 
@@ -1244,13 +1237,13 @@
                         <span class="font-semibold">構成:</span> 無所属議員など
                     </div>
                     <div class="text-sm text-gray-600 mb-2">
-                        <span class="font-semibold">選挙区:</span> <span class="font-bold text-gray-600">12議席</span>
+                        <span class="font-semibold">選挙区:</span> <span class="font-bold text-gray-600">9議席</span>
                     </div>
                     <div class="text-sm text-gray-600 mb-2">
-                        <span class="font-semibold">比例代表:</span> <span class="font-bold text-gray-600">5議席</span>
+                        <span class="font-semibold">比例代表:</span> <span class="font-bold text-gray-600">4議席</span>
                     </div>
                     <div class="text-sm text-gray-600 mb-4">
-                        <span class="font-semibold">合計:</span> <span class="text-lg font-bold text-gray-600">17議席</span>
+                        <span class="font-semibold">合計:</span> <span class="text-lg font-bold text-gray-600">13議席</span>
                     </div>
                     <p class="text-sm text-gray-700 leading-relaxed">
                         特定の政党に所属しない無所属議員や、その他の小規模な政治団体。
@@ -2484,7 +2477,7 @@
             });
         })();
 
-        // ========== カウントダウン機能 ==========
+        // ========== カウントダウン機能（0日以下は「あと0日」「選挙終了」表示） ==========
         function updateCountdown() {
             const electionDate = new Date('2026-02-08');
             const today = new Date();
@@ -2493,22 +2486,23 @@
             
             const diffTime = electionDate - today;
             const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+            const isEnded = diffDays <= 0;
+            const newValue = isEnded ? 0 : diffDays;
             
             const countdownEl = document.getElementById('countdown');
+            const endedEl = document.getElementById('countdown-ended');
             if (countdownEl) {
-                const currentValue = parseInt(countdownEl.textContent) || 0;
-                const newValue = diffDays > 0 ? diffDays : 0;
-                
-                if (currentValue !== newValue) {
-                    // アニメーション付きで更新
+                if (parseInt(countdownEl.textContent) !== newValue) {
                     countdownEl.style.transform = 'scale(1.2)';
                     countdownEl.style.transition = 'transform 0.3s ease';
-                    
                     setTimeout(() => {
                         countdownEl.textContent = newValue;
                         countdownEl.style.transform = 'scale(1)';
                     }, 150);
                 }
+            }
+            if (endedEl) {
+                endedEl.style.display = isEnded ? 'block' : 'none';
             }
         }
 
