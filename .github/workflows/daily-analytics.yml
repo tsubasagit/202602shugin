@@ -1,10 +1,7 @@
 name: Daily Analytics Collection
 
 on:
-  schedule:
-    # 毎日0時（UTC）に実行（JST 9時）
-    - cron: '0 0 * * *'
-  workflow_dispatch: # 手動実行も可能
+  workflow_dispatch: # 手動実行のみ（毎日の自動実行は削除）
 
 jobs:
   collect-analytics:
@@ -62,4 +59,5 @@ jobs:
           git config --local user.name "GitHub Action"
           git add analytics/ analytics-summary.md
           git diff --staged --quiet || git commit -m "📊 Daily analytics update: $(date +%Y-%m-%d)"
-          git push
+          git pull --rebase origin ${{ github.ref_name }}
+          git push origin ${{ github.ref_name }}
